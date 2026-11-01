@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="dark light" name="color-scheme"/><title>Nobi Launcher · Hướng dẫn cài đặt &amp; sử dụng</title><style>*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:92px}body{margin:0;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:#dce5f0;background:#0a111d;line-height:1.68}a{color:#67c8ff}button,input{font:inherit}.top{height:72px;position:sticky;top:0;z-index:20;background:rgba(11,19,32,.92);backdrop-filter:blur(18px);border-bottom:1px solid #263347;display:flex;align-items:center;justify-content:space-between;padding:0 28px;gap:16px}.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.3px}.brand-mark{display:grid;place-items:center;width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,#ff985e,#ff5b56);color:#111;font-size:20px}.brand small{display:block;font-size:11px;font-weight:500;color:#93a3b8;letter-spacing:0}.top-actions{display:flex;gap:10px;align-items:center}.chip,.theme-btn{border:1px solid #344257;background:#152235;color:#dce5f0;border-radius:10px;padding:7px 12px;cursor:pointer}.chip.active{background:#f58b53;color:#181c26;border-color:#f58b53;font-weight:750}.shell{display:grid;grid-template-columns:275px minmax(0,1fr);max-width:1540px;margin:auto}.sidebar{position:sticky;top:72px;height:calc(100vh - 72px);overflow-y:auto;padding:26px 15px 28px 22px;border-right:1px solid #253247}.sidebar h4{font-size:11px;letter-spacing:1.7px;color:#8191a7;margin:12px 10px 14px;text-transform:uppercase}.sidebar a{display:flex;align-items:flex-start;gap:11px;text-decoration:none;color:#9eafc2;font-size:13px;line-height:1.45;padding:10px 11px;border-radius:10px;margin:2px 0}.sidebar a span{font-size:11px;color:#647890;font-weight:800;min-width:20px}.sidebar a:hover,.sidebar a.active{background:#1a2a3e;color:#fff}.sidebar a.active{box-shadow:inset 3px 0 #ff9259}.sidebar .progress{height:5px;background:#25354a;border-radius:5px;overflow:hidden;margin:24px 10px 6px}.sidebar .progress div{height:100%;background:#ff9259;width:0;transition:width .2s}.sidebar .progress-label{color:#7d90a8;font-size:11px;padding:0 10px}.content{min-width:0;padding:35px clamp(20px,5vw,78px) 100px;max-width:1120px;width:100%;margin:auto}.hero{padding:35px 38px 30px;background:radial-gradient(circle at 92% 8%,rgba(255,125,73,.19),transparent 40%),linear-gradient(135deg,#1c2a41,#111d2d);border:1px solid #344157;border-radius:22px;margin-bottom:24px}.eyebrow{font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#ffae76}.hero h1{font-size:clamp(28px,3.4vw,43px);line-height:1.18;letter-spacing:-1px;margin:12px 0 14px;color:#fff}.hero p{color:#a9bbce;max-width:760px}.hero-meta{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}.pill{border:1px solid #435169;border-radius:999px;padding:4px 12px;color:#c7d4e3;font-size:12px}.alert{padding:18px 22px;border-radius:14px;background:#31251e;border:1px solid #73513c;color:#f9d5bc;margin:22px 0}.alert.tip{background:#18302a;border-color:#2f6b58;color:#c9f0df}.search{width:100%;background:#101b2b;border:1px solid #344257;border-radius:11px;padding:11px 13px;color:#e7eff9;outline:none}.search:focus{border-color:#ff9c65}.guide-section{padding:25px 0 28px;border-bottom:1px solid #263347}.guide-section h2{font-size:clamp(23px,2.5vw,30px);line-height:1.3;color:#fff;letter-spacing:-.5px;margin:6px 0 22px}.guide-section h3{font-size:18px;color:#fff;margin:30px 0 12px}.guide-section p,.guide-section li{color:#bdcadb}.guide-section strong{color:#f4f7fd}.guide-section ul,.guide-section ol{padding-left:24px}.guide-section li{margin:7px 0}.guide-section blockquote{margin:18px 0;padding:14px 19px;border-left:3px solid #ff9259;background:#192537;border-radius:0 10px 10px 0}.guide-section blockquote p{margin:0}.guide-section table{width:100%;border-collapse:collapse;font-size:13px;display:block;overflow:auto}.guide-section th,.guide-section td{text-align:left;border-bottom:1px solid #314056;padding:12px;vertical-align:top}.guide-section th{background:#1b2a3e;color:#fff;white-space:nowrap}.guide-section :not(pre)>code{background:#223248;color:#ffbf94;padding:2px 5px;border-radius:5px;font-size:.91em;overflow-wrap:anywhere}pre{background:#0b1522;border:1px solid #2a3b52;border-radius:12px;padding:38px 17px 17px;overflow:auto;position:relative;margin:15px 0 23px}pre code{color:#a8e5db;font-size:12.5px;line-height:1.65;white-space:pre;tab-size:2}.copy-btn{position:absolute;right:9px;top:8px;background:#22364c;border:1px solid #41536a;border-radius:7px;color:#cfe0f3;padding:4px 10px;font-size:11px;cursor:pointer}.copy-btn:hover{background:#34506b}.os-panel{border:1px solid #34465e;border-radius:14px;background:#111e2f;overflow:hidden;margin:19px 0 24px}.os-head{display:flex;align-items:center;justify-content:space-between;gap:10px;background:#1c2b3f;padding:9px 12px}.os-title{font-size:12px;font-weight:800;color:#e3eaf3}.os-tabs{display:flex;gap:5px}.os-tab{border:0;background:transparent;color:#9aabc0;padding:6px 13px;border-radius:8px;cursor:pointer;font-size:12px}.os-tab.active{background:#f58b53;color:#1c1b1b;font-weight:800}.os-body{padding:4px 12px}.os-body pre{margin:8px 0 12px}.os-body .os-note{color:#9cb0c7;font-size:12px;margin:6px 0}.os-view[hidden]{display:none}.no-results{padding:30px;color:#b8c7d8;text-align:center}.footer{font-size:12px;color:#8395ab;padding:30px 0}.mobile-menu{display:none}.light{background:#f5f7fb;color:#263344}.light .top{background:rgba(255,255,255,.93);border-color:#d9e0ea}.light .sidebar{border-color:#d9e0ea}.light .sidebar a{color:#58697c}.light .sidebar a.active,.light .sidebar a:hover{background:#e8edf5;color:#18283a}.light .content .guide-section{border-color:#d9e0ea}.light .guide-section h2,.light .guide-section h3,.light .guide-section strong{color:#162536}.light .guide-section p,.light .guide-section li{color:#44576b}.light .hero{background:linear-gradient(135deg,#203450,#33485f)}.light .guide-section :not(pre)>code{background:#e8edf5;color:#ac4f2b}.light .guide-section blockquote{background:#e7eef7}.light .guide-section th{background:#e4ebf4;color:#1e3044}.light .guide-section td,.light .guide-section th{border-color:#d5dfeb}.light .chip,.light .theme-btn{background:#fff;color:#263344}.light .chip.active{background:#f58b53}.light .os-panel{background:#edf2f8}.light .os-head{background:#dfe8f3}.light .os-title{color:#263344}.light .os-tab{color:#43566c}.light .os-tab.active{color:#1c1b1b}.light .search{background:#fff;color:#182b3d;border-color:#cad5e2}.light .alert{background:#fff1e6;color:#744322}.light .alert.tip{background:#e6f6ef;color:#1f5a45}.light .pill{color:#dce5f0}@media(max-width:850px){.shell{display:block}.sidebar{display:none;position:fixed;top:72px;bottom:0;left:0;width:min(85vw,310px);height:auto;background:#111c2b;z-index:19;box-shadow:20px 0 50px #0009}.sidebar.open{display:block}.mobile-menu{display:inline-flex}.content{padding:20px 18px 65px}.hero{padding:26px 21px}.top{padding:0 14px}.brand small{display:none}.top-actions{gap:5px}.chip,.theme-btn{padding:7px 9px;font-size:12px}.guide-section{padding-top:18px}}@media print{body{background:white!important;color:#111!important}.top,.sidebar,.copy-btn,.os-tabs,.search,.seg-tab-buttons{display:none!important}.shell{display:block}.content{max-width:none;padding:0}.hero{background:white!important;color:#111!important;border:0}.hero h1,.guide-section h2,.guide-section h3{color:#111!important}.guide-section p,.guide-section li{color:#222!important}.os-view[hidden],.seg-pane[hidden]{display:block!important}pre{white-space:pre-wrap;break-inside:avoid}section{break-inside:auto}}</style><style>.seg-tabs{border:1px solid #334155;border-radius:12px;overflow:hidden;margin:14px 0 20px}.seg-tab-buttons{display:flex;gap:6px;padding:7px;background:rgba(128,128,128,.08)}.seg-tab{flex:1;border:0;border-radius:8px;background:transparent;color:inherit;padding:10px 14px;cursor:pointer;font-weight:700}.seg-tab.active{background:#0c8cba;color:#fff}.seg-pane{padding:0 14px 6px}.seg-pane[hidden]{display:none!important}.light .seg-tabs{border-color:#cad5e2}</style><style>
+.configurator{margin:22px 0 28px;padding:23px;border:1px solid #53637b;border-radius:17px;background:linear-gradient(130deg,#192b40,#111e2e)}
+.configurator h2{margin:0 0 5px;font-size:21px;color:#fff}.configurator p{color:#afc0d3;font-size:13px;margin:7px 0 17px}
+.config-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.config-field{display:flex;flex-direction:column;gap:5px;min-width:0}.config-field label{font-size:12px;color:#d8e3f1;font-weight:700}.config-field input{width:100%;border:1px solid #415572;border-radius:9px;padding:10px 12px;background:#0d1929;color:#f2f7ff;outline:none;font:inherit;font-size:13px}.config-field input:focus{border-color:#ff965e}.config-field small{font-size:11px;color:#8fa4bd}.config-field input[aria-invalid=true]{border-color:#ff7676}.config-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:16px}.config-reset{border:1px solid #536781;background:#273b51;color:#fff;border-radius:8px;padding:8px 13px;cursor:pointer}.config-status{font-size:12px;color:#a4e4c2}.config-hint{border-left:3px solid #f58b53;padding-left:10px!important}.light .configurator{background:#e7eef8;border-color:#c5d4e6}.light .configurator h2,.light .config-field label{color:#22344b}.light .configurator p,.light .config-field small{color:#526981}.light .config-field input{background:#fff;color:#1c2e43;border-color:#b6c7d9}.light .config-reset{background:#fff;color:#23344b}
+@media(max-width:680px){.config-grid{grid-template-columns:1fr}.configurator{padding:17px}}
+@media print{.configurator{display:none}}
+</style><style>.download-intro{border:1px solid #40516a;border-radius:18px;padding:24px 28px;background:linear-gradient(125deg,#182c42,#142131);margin:0 0 24px}.download-kicker{font-size:11px;letter-spacing:1.7px;color:#ffb887;font-weight:850}.download-intro h2{font-size:23px;color:#fff;margin:7px 0}.download-intro p{color:#c3d0de;margin:10px 0}.download-intro code{background:#293c52;padding:2px 6px;border-radius:5px;overflow-wrap:anywhere}.download-links{display:flex;flex-wrap:wrap;gap:10px;margin:19px 0}.download-link{display:inline-block;text-decoration:none;border:1px solid #506078;border-radius:10px;padding:10px 15px;color:#e8f3ff;font-weight:700;font-size:13px}.download-link.primary{background:#f58b53;color:#1d1d1d;border-color:#f58b53}.download-intro .download-footnote,.download-intro .download-source{font-size:12px;color:#aebed0}.author-footer{border-top:1px solid #35465c;display:flex;gap:15px;align-items:flex-start;margin-top:35px}.author-avatar{flex:none;width:46px;height:46px;border-radius:14px;display:grid;place-items:center;font-size:25px;font-weight:900;background:linear-gradient(135deg,#ffb36c,#e76d52);color:#19202a}.author-footer strong{font-size:16px;color:#e8eef7}.author-footer p{margin:5px 0}.author-footer .credit{font-size:11px;color:#90a3b7;margin-top:14px}.light .download-intro{background:#e8eef7;border-color:#ccd7e4}.light .download-intro h2,.light .author-footer strong{color:#17293e}.light .download-intro p{color:#41586f}.light .download-intro code{background:#dce5f0}.light .download-intro .download-footnote,.light .download-intro .download-source{color:#566a80}.light .download-link:not(.primary){color:#23405e;border-color:#a5b5c7}@media(max-width:600px){.download-intro{padding:20px}.download-links{flex-direction:column}.download-link{text-align:center}}</style></head><body><header class="top"><div class="brand"><button aria-label="Mở mục lục" class="theme-btn mobile-menu">☰</button><div class="brand-mark">N</div><div>Nobi Launcher<small>Dock · Control Center · Nobi Remote</small></div></div><div class="top-actions"><button class="chip active" data-os="mac">macOS</button><button class="chip" data-os="win">Windows</button><button class="theme-btn" id="theme-toggle" title="Chế độ sáng/tối">◐</button></div></header><div class="shell"><aside class="sidebar"><h4>Mục lục · 10 chương</h4><input aria-label="Tìm trong hướng dẫn" class="search" placeholder="Tìm nhanh trong hướng dẫn..." type="search"/><nav><a data-nav="section-1" href="#section-1"><span>01</span>Trong thư mục này</a><a data-nav="section-2" href="#section-2"><span>02</span>Yêu cầu</a><a data-nav="section-3" href="#section-3"><span>03</span>Cài đặt</a><a data-nav="section-4" href="#section-4"><span>04</span>Bật tích hợp hệ thống</a><a data-nav="section-5" href="#section-5"><span>05</span>Dùng trên TV</a><a data-nav="section-6" href="#section-6"><span>06</span>Nobi Remote: điều khiển từ điện thoại</a><a data-nav="section-7" href="#section-7"><span>07</span>Cập nhật</a><a data-nav="section-8" href="#section-8"><span>08</span>Gỡ cài đặt</a><a data-nav="section-9" href="#section-9"><span>09</span>Xử lý sự cố</a><a data-nav="section-10" href="#section-10"><span>10</span>Giấy phép và ghi công</a></nav><div class="progress"><div></div></div><div class="progress-label">Chưa bắt đầu</div></aside><main class="content"><div class="hero"><div class="eyebrow">Hướng dẫn sử dụng · 01.11.2026</div><h1>Nobi Launcher cho LG webOS TV</h1><p>Thay màn hình chính của TV LG webOS bằng giao diện gọn, nhanh, dễ dùng bằng remote: dock kiểu macOS, Control Center, trang chủ có đồng hồ lớn, âm lịch và thời tiết. Đi kèm là <strong>Nobi Remote</strong>, webapp điều khiển TV ngay trên điện thoại.</p><div class="hero-meta"><span class="pill">Phiên bản 2.10.3</span><span class="pill">Đã thử: LG UK6340PTF · webOS TV Lite 4.4.3</span><span class="pill">10 chương</span><span class="pill">Hoạt động offline · 1 file HTML</span></div></div><section class="download-intro" aria-label="Tải file cài Nobi Launcher"><div class="download-kicker">BẮT ĐẦU TẠI ĐÂY</div><h2>Chuẩn bị file cài đặt</h2><p>Tải <strong>com.nobi.launcher_2.10.3_arm.ipk</strong> (khoảng 25&nbsp;MB, đã gồm Nobi Remote) và <strong>SHA256SUMS</strong> vào cùng một thư mục trên máy tính, ví dụ <code>Downloads</code>. Sau đó nhập IP TV trong biểu mẫu phía dưới để tạo lệnh cài đặt.</p><div class="download-links"><a href="com.nobi.launcher_2.10.3_arm.ipk" download class="download-link primary">⤓ Tải com.nobi.launcher_2.10.3_arm.ipk</a><a href="SHA256SUMS" download class="download-link">⤓ Tải SHA256SUMS</a><a href="https://github.com/nobinhatnguyen/webos-faultmanager-auto/releases" target="_blank" rel="noopener" class="download-link">↗ Releases trên GitHub</a></div><p class="download-footnote">Nếu mở trang này từ GitHub, hãy tải file <code>.ipk</code> ở mục <strong>Releases</strong> của repo. File <code>.ipk</code> cài <strong>lên TV</strong>, không chạy trực tiếp trên macOS/Windows.</p><div class="download-source">Nobi Launcher dựa trên <a href="https://github.com/ecklf/lg-luma" target="_blank" rel="noopener">lg-luma</a> của ecklf (giấy phép MIT).</div></section><section aria-label="Cấu hình lệnh cài đặt" class="configurator" id="command-config">
+<h2>⚙️ Tùy chỉnh thông tin — lệnh tự cập nhật</h2>
+<p>Nhập IP TV. Tất cả các khối lệnh phía dưới sẽ tự động thay đổi; chọn tab macOS / Windows để xem lệnh tương ứng.</p>
+<div class="config-grid">
+<div class="config-field" style="grid-column:1 / -1"><label for="cfg-ip">Địa chỉ IP TV</label><input id="cfg-ip" inputmode="decimal" placeholder="192.168.1.100" spellcheck="false" type="text" value="192.168.1.100"/><small>Xem trong cài đặt mạng của TV, hoặc ở Cài đặt › Hệ thống của Nobi Launcher</small></div>
+</div>
+<div class="config-actions"><button class="config-reset" id="cfg-reset" type="button">↺ Khôi phục mặc định</button><span class="config-status" id="cfg-status" role="status">✓ Lệnh bên dưới được cập nhật tự động</span></div>
+<p class="config-hint">Thông tin cấu hình chỉ dùng để tạo lệnh trong trình duyệt; không gửi lên máy chủ. Luôn kiểm tra lệnh trước khi sao chép và chạy.</p>
+</section><div class="alert"><strong>⚠ Cảnh báo:</strong> Bản này mới được thử trên <strong>LG UK6340PTF, webOS TV Lite 4.4.3</strong>. Các tính năng trong mục <strong>Tích hợp</strong> (thay nút Home, chạy nền) sửa cách TV hoạt động sau mỗi lần khởi động. Trên TV hoặc phiên bản webOS khác, hãy bật từng mục một và kiểm tra kỹ. Mọi mục đều tắt lại được (xem <a href="#section-8">Gỡ cài đặt</a>).</div><div class="no-results" hidden="">Không tìm thấy nội dung phù hợp.</div>
+
+<section class="guide-section" id="wrap-section-1"><h2 id="section-1">1. Trong thư mục này</h2>
+<table>
+<thead><tr><th>File</th><th>Nội dung</th></tr></thead>
+<tbody>
+<tr><td><code>com.nobi.launcher_&lt;phiên bản&gt;_arm.ipk</code></td><td>File cài Nobi Launcher, đã gồm cả Nobi Remote. Tải ở mục <strong>Releases</strong> của repo.</td></tr>
+<tr><td><code>SHA256SUMS</code></td><td>Mã kiểm tra để chắc file tải về không bị hỏng.</td></tr>
+<tr><td><code>README.md</code> / <code>README.html</code></td><td>Hướng dẫn này.</td></tr>
+</tbody>
+</table>
+<p>Kiểm tra file sau khi tải. Chạy lệnh trong thư mục chứa file <code>.ipk</code> và <code>SHA256SUMS</code>:</p>
+<div class="os-panel"><div class="os-head"><span class="os-title">Kiểm tra SHA-256</span><div class="os-tabs"><button class="os-tab" data-os="mac">macOS / Linux</button><button class="os-tab" data-os="win">Windows</button></div></div><div class="os-body"><div class="os-view" data-os="mac"><pre><code class="language-bash">cd ~/Downloads
+shasum -a 256 -c SHA256SUMS</code></pre><p class="os-note">Kết quả đúng: <code>com.nobi.launcher_2.10.3_arm.ipk: OK</code>.</p></div><div class="os-view" data-os="win"><pre><code class="language-powershell">cd "$env:USERPROFILE\Downloads"
+(Get-FileHash .\com.nobi.launcher_2.10.3_arm.ipk -Algorithm SHA256).Hash.ToLower()
+Get-Content .\SHA256SUMS</code></pre><p class="os-note">So sánh hai chuỗi mã: phải giống hệt nhau.</p></div></div></div>
+</section>
+
+<section class="guide-section" id="wrap-section-2"><h2 id="section-2">2. Yêu cầu</h2>
+<ul>
+<li>TV LG chạy webOS (đã thử: webOS TV Lite 4.4.3).</li>
+<li>TV <strong>đã root</strong> và đã cài <strong>Homebrew Channel</strong>. Không root thì vẫn mở được Nobi Launcher như một app thường, nhưng không thay được nút Home, không tự mở khi bật TV và không dùng được Nobi Remote.</li>
+<li>Máy tính cùng mạng với TV để cài file <code>.ipk</code>.</li>
+<li>Điện thoại cùng mạng Wi-Fi với TV nếu dùng Nobi Remote.</li>
+</ul>
+<p>Root TV và cài Homebrew Channel: làm theo hướng dẫn chính thức ở <a href="https://rootmy.tv" target="_blank" rel="noopener">rootmy.tv</a> và <a href="https://www.webosbrew.org" target="_blank" rel="noopener">webosbrew.org</a>, hoặc xem <a href="../README.html">hướng dẫn SSH, Root &amp; Homebrew</a> trong repo này. Mỗi đời TV và firmware có cách root khác nhau, hãy đọc kỹ trước khi làm.</p>
+</section>
+
+<section class="guide-section" id="wrap-section-3"><h2 id="section-3">3. Cài đặt</h2>
+<h3>Bước 1. Tắt Quick Start+</h3>
+<p>Trên TV, mở cài đặt của LG và tắt <strong>Quick Start+</strong>. Khi Quick Start+ bật, bấm nút nguồn chỉ đánh thức TV khỏi chế độ chờ, nên Nobi Launcher không tự mở lên được.</p>
+<h3 id="step-2">Bước 2. Cài file <code>.ipk</code></h3>
+<p>Chọn một trong hai cách.</p>
+<p><strong>Cách A: webOS Dev Manager (dễ nhất).</strong> Tải <a href="https://github.com/webosbrew/dev-manager-desktop" target="_blank" rel="noopener">webOS Dev Manager</a> về máy tính, thêm TV theo hướng dẫn của Dev Manager, rồi dùng chức năng cài app (Install) và chọn file <code>com.nobi.launcher_&lt;phiên bản&gt;_arm.ipk</code>.</p>
+<p><strong>Cách B: SSH bằng tài khoản root.</strong> Chép file lên TV từ máy tính:</p>
+<div class="os-panel"><div class="os-head"><span class="os-title">Chép .ipk lên TV</span><div class="os-tabs"><button class="os-tab" data-os="mac">macOS</button><button class="os-tab" data-os="win">Windows</button></div></div><div class="os-body"><div class="os-view" data-os="mac"><pre><code class="language-bash">cd ~/Downloads
+scp com.nobi.launcher_2.10.3_arm.ipk root@192.168.1.100:/media/developer/temp/nobi-launcher.ipk
+ssh root@192.168.1.100</code></pre></div><div class="os-view" data-os="win"><pre><code class="language-powershell">cd "$env:USERPROFILE\Downloads"
+scp .\com.nobi.launcher_2.10.3_arm.ipk root@192.168.1.100:/media/developer/temp/nobi-launcher.ipk
+ssh root@192.168.1.100</code></pre><p class="os-note">Cần OpenSSH Client (Settings → Apps → Optional features). Nếu <code>scp</code> báo lỗi trên TV, thử thêm <code>-O</code>: <code>scp -O ...</code>.</p></div></div></div>
+<p><strong>Trong shell root trên TV</strong> (dấu nhắc thường là <code>root@LGwebOSTV:~#</code>), cài bằng dịch vụ cài app của webOS:</p>
+<pre><code class="language-sh">luna-send -i luna://com.webos.appInstallService/dev/install '{"id":"com.nobi.launcher","ipkUrl":"/media/developer/temp/nobi-launcher.ipk","subscribe":true}'</code></pre>
+<p>Khi thấy <code>"state":"installed"</code> thì bấm <code>Ctrl+C</code> để thoát.</p>
+<h3>Bước 3. Mở Nobi Launcher</h3>
+<p>Tìm <strong>Nobi Launcher</strong> trong danh sách app của TV và mở lên. Lần đầu mở, app đọc danh sách ứng dụng và đầu vào của TV, mất vài giây.</p>
+<h3>Bước 4. Bật tích hợp</h3>
+<p>Vào <strong>Cài đặt › Tích hợp</strong> trong Nobi Launcher và bật các mục bạn cần (xem <a href="#section-4">phần tiếp theo</a>).</p>
+</section>
+
+<section class="guide-section" id="wrap-section-4"><h2 id="section-4">4. Bật tích hợp hệ thống</h2>
+<p><strong>Cài đặt › Tích hợp</strong> có 4 công tắc. Mỗi công tắc bật hoặc tắt một hook khởi động của Homebrew Channel, nên cần TV đã root. TV chưa root thì trang này chỉ hiện lời giải thích.</p>
+<table>
+<thead><tr><th>Công tắc</th><th>Tác dụng</th></tr></thead>
+<tbody>
+<tr><td><strong>Nút Home mở Nobi Launcher</strong></td><td>Bấm Home trên remote là mở Nobi Launcher; giữ Home vẫn mở danh sách app gần đây của LG. Có hiệu lực <strong>sau khi khởi động lại TV</strong>: bật xong, Nobi Launcher hỏi có khởi động lại ngay không.</td></tr>
+<tr><td><strong>Tự mở khi bật TV</strong></td><td>Bật TV là Nobi Launcher hiện lên, khoảng một phút sau khi TV khởi động.</td></tr>
+<tr><td><strong>Chạy nền trên app khác (video vào dock)</strong></td><td>Nobi Launcher chạy nền khi bạn mở app khác. Đang xem YouTube mà bấm Home thì video thu nhỏ vào ô đầu dock và vẫn phát.</td></tr>
+<tr><td><strong>Điều khiển từ điện thoại (Nobi Remote)</strong></td><td>Bật máy chủ nhỏ trên TV để điện thoại điều khiển TV qua Wi-Fi.</td></tr>
+</tbody>
+</table>
+<div class="alert"><strong>Quan trọng:</strong> Tắt các mục này trước khi gỡ Nobi Launcher, nhất là <strong>Nút Home</strong>. Nếu không, nút Home sẽ trỏ vào app đã bị gỡ.</div>
+</section>
+
+<section class="guide-section" id="wrap-section-5"><h2 id="section-5">5. Dùng trên TV</h2>
+<h3>Trang chủ và dock</h3>
+<ul>
+<li><strong>Trang chủ</strong> hiện lời chào, giờ lớn, ngày, âm lịch kèm con giáp (khi dùng tiếng Việt) và thời tiết hôm nay.</li>
+<li><strong>Dock</strong> ở đáy màn hình, có ở mọi trang. Bên trái là các app yêu thích, giữa là các đầu vào (Live TV, HDMI), bên phải là 3 biểu tượng trang: Trang chủ, Ứng dụng, Cài đặt. Mục đang chọn phóng to kiểu macOS và hiện tên phía trên.</li>
+<li>Đang xem YouTube khi bấm Home thì ô đầu dock là video thu nhỏ. Bấm OK trên ô đó để quay lại xem toàn màn hình.</li>
+</ul>
+<h3>Thao tác với app</h3>
+<table>
+<thead><tr><th>Phím</th><th>Tác dụng</th></tr></thead>
+<tbody>
+<tr><td><strong>OK</strong></td><td>Mở app.</td></tr>
+<tr><td><strong>Giữ OK</strong> trên một app ở dock</td><td>Vào chế độ sắp xếp, dùng Trái/Phải để đổi chỗ, bấm OK hoặc Back để xong.</td></tr>
+<tr><td><strong>Giữ OK</strong> (hoặc nút <strong>Menu</strong>) trên app ở trang Ứng dụng</td><td>Mở menu để thêm hoặc bỏ yêu thích, ẩn app, hoặc xoá app khỏi TV.</td></tr>
+<tr><td><strong>Back</strong></td><td>Quay lại trang trước.</td></tr>
+</tbody>
+</table>
+<h3>Trang Ứng dụng</h3>
+<p>Lưới tất cả app, có ô tìm kiếm theo tên. Thứ tự sắp theo số lần mở (mặc định) hoặc theo tên, đổi trong <strong>Cài đặt › Chung</strong>.</p>
+<h3>Control Center</h3>
+<p>Bấm nút tròn ở góc trên bên phải để mở Control Center:</p>
+<ul>
+<li><strong>Wi-Fi</strong>: xem mạng đang dùng, quét và chọn mạng khác, nhập mật khẩu bằng bàn phím trên TV.</li>
+<li><strong>Bluetooth</strong>: tìm và kết nối loa, tai nghe.</li>
+<li><strong>Âm lượng</strong>: Trái/Phải để tăng giảm, OK để tắt hoặc bật tiếng.</li>
+<li><strong>Đèn nền</strong> và <strong>chế độ hình</strong>: Trái/Phải để chỉnh.</li>
+<li><strong>Tắt màn hình</strong>: TV vẫn phát tiếng, bấm phím bất kỳ để bật lại màn hình.</li>
+<li><strong>Đầu vào</strong> và <strong>Cài đặt TV</strong> (mở cài đặt gốc của LG).</li>
+</ul>
+<h3>Tìm kiếm</h3>
+<p>Khi bạn tìm bằng giọng nói hoặc gõ chữ từ Nobi Remote, TV mở trang tìm kiếm: hàng trên cùng là kết quả của LG (video YouTube, phim), tiếp theo là app và đầu vào trùng tên. Chọn một kết quả để mở video hoặc app đó.</p>
+<h3>Cài đặt</h3>
+<table>
+<thead><tr><th>Mục</th><th>Có gì</th></tr></thead>
+<tbody>
+<tr><td><strong>Chung</strong></td><td>Tên app, đồng hồ (12/24 giờ, hiện giây), giảm chuyển động, ngôn ngữ (Tiếng Việt, English), tên trong lời chào, cách sắp xếp app, màu nhấn (Sáng, Đỏ Oxblood, Xanh biển, Xanh lá).</td></tr>
+<tr><td><strong>Hình nền</strong></td><td>5 hình nền có sẵn và các ảnh bạn gửi từ điện thoại.</td></tr>
+<tr><td><strong>Thời tiết</strong></td><td>Bật hoặc tắt widget, chọn thành phố, đơn vị °C hoặc °F.</td></tr>
+<tr><td><strong>Đầu vào</strong></td><td>Đổi tên từng đầu vào và chọn khi nào hiện trên dock: luôn hiện, không bao giờ, hoặc chỉ khi có thiết bị cắm vào.</td></tr>
+<tr><td><strong>Hệ thống</strong></td><td>Làm mới danh sách app, kiểu hiển thị văn bản, thoát app, và <strong>địa chỉ của Nobi Remote</strong>.</td></tr>
+<tr><td><strong>Tích hợp</strong></td><td>4 công tắc ở <a href="#section-4">phần trên</a>.</td></tr>
+<tr><td><strong>Giới thiệu</strong></td><td>Phiên bản, tác giả, mã nguồn.</td></tr>
+</tbody>
+</table>
+</section>
+
+<section class="guide-section" id="wrap-section-6"><h2 id="section-6">6. Nobi Remote: điều khiển từ điện thoại</h2>
+<p>Nobi Remote là trang web chạy ngay trên TV. Điện thoại chỉ cần trình duyệt, không cần cài app. Có thể thêm trang này ra màn hình chính để dùng như một app.</p>
+<h3>Thiết lập lần đầu</h3>
+<ol>
+<li>Trên TV, bật <strong>Cài đặt › Tích hợp › Điều khiển từ điện thoại (Nobi Remote)</strong>.</li>
+<li>Xem địa chỉ ở <strong>Cài đặt › Hệ thống › Điều khiển từ điện thoại</strong>, ví dụ <code>192.168.1.100:8766</code>.</li>
+<li>Trên điện thoại (cùng Wi-Fi với TV), mở địa chỉ sau. Trang thiết lập của Nobi Remote hiện ra.
+<pre><code>http://192.168.1.100:8766</code></pre></li>
+<li><strong>Cài chứng chỉ của TV</strong>, việc chỉ làm một lần. Nobi Remote chạy qua HTTPS bằng chứng chỉ do chính TV tạo ra. Cài chứng chỉ thì trình duyệt không còn cảnh báo, và điện thoại hiện đúng biểu tượng khi thêm ra màn hình chính.
+<div class="seg-tabs"><div class="seg-tab-buttons"><button class="seg-tab active" data-target="cert-ios" type="button">iPhone</button><button class="seg-tab" data-target="cert-android" type="button">Android</button></div><div class="seg-pane" id="cert-ios"><ol>
+<li>Mở trang thiết lập bằng <strong>Safari</strong> (Chrome không cài được hồ sơ).</li>
+<li>Bấm <strong>Tải chứng chỉ (iPhone)</strong> rồi chọn <strong>Cho phép</strong>.</li>
+<li>Vào <strong>Cài đặt › Đã tải về hồ sơ › Cài đặt</strong>.</li>
+<li>Vào <strong>Cài đặt › Cài đặt chung › Giới thiệu › Cài đặt tin cậy chứng nhận</strong>, bật <strong>Nobi Home CA</strong>.</li>
+</ol></div><div class="seg-pane" hidden="" id="cert-android"><ol>
+<li>Bấm <strong>Tải chứng chỉ (Android)</strong>.</li>
+<li>Vào <strong>Cài đặt › Bảo mật › Mã hoá và thông tin xác thực › Cài chứng chỉ CA</strong> và chọn file vừa tải.</li>
+</ol></div></div></li>
+<li>Bấm <strong>Mở Nobi Remote</strong>. Lần đầu, iPhone có thể hỏi quyền truy cập mạng cục bộ: bấm <strong>Cho phép</strong>.</li>
+<li><strong>Ghép với TV</strong>: bấm <strong>Hiện mã trên TV</strong>, TV hiện mã 4 số, nhập mã vào điện thoại rồi bấm <strong>Ghép</strong>. Điện thoại được ghi nhớ, lần sau không phải nhập lại.</li>
+<li>Lần đầu bấm phím, TV hỏi có cho điện thoại điều khiển không: dùng remote của TV bấm <strong>Cho phép</strong>.</li>
+<li>Thêm ra màn hình chính: trên iPhone, bấm <strong>Chia sẻ › Thêm vào MH chính</strong> trong Safari; trên Android, mở menu Chrome và chọn <strong>Thêm vào màn hình chính</strong>.</li>
+</ol>
+<div class="alert tip"><strong>💡 Mẹo:</strong> Nên đặt IP cố định cho TV trong router (DHCP reservation). Khi IP của TV đổi, TV tự ký lại chứng chỉ và điện thoại vẫn tin chứng chỉ đó, nhưng biểu tượng trên màn hình chính vẫn trỏ vào địa chỉ cũ.</div>
+<h3>Thanh trên cùng</h3>
+<ul>
+<li>Trạng thái kết nối (<strong>Đã kết nối</strong> hoặc <strong>Đang kết nối lại…</strong>).</li>
+<li>Đồng hồ đếm ngược khi đang hẹn giờ tắt TV.</li>
+<li>Nút đổi giao diện sáng hoặc tối cho trang web.</li>
+<li>Nút <strong>Nguồn</strong>: tắt màn hình, bật lại màn hình, hoặc tắt TV.</li>
+</ul>
+<p>Nền của trang web là hình nền đang dùng trên TV, làm mờ.</p>
+<h3>Tab Điều khiển</h3>
+<ul>
+<li><strong>Phím điều hướng</strong> và <strong>OK</strong>. Giữ một phím mũi tên để bấm lặp liên tục.</li>
+<li><strong>Quay lại</strong>, <strong>Trang chủ</strong>, <strong>Phát hoặc tạm dừng</strong>.</li>
+<li><strong>Âm lượng</strong> tăng, giảm, tắt tiếng; số âm lượng cập nhật ngay.</li>
+<li><strong>Kênh</strong> trước và sau.</li>
+<li><strong>Micro</strong>: giữ nút micro, nói nội dung cần tìm rồi thả tay. TV mở trang tìm kiếm với kết quả YouTube và kết quả tìm kiếm của LG. Nếu trình duyệt không hỗ trợ nhận giọng nói, Nobi Remote hiện ô gõ chữ; bạn có thể đọc bằng micro của bàn phím điện thoại.</li>
+<li><strong>Gõ chữ lên TV</strong>: gõ vào ô trên điện thoại, chữ xuất hiện trong ô nhập đang mở trên TV (ví dụ ô tìm kiếm của YouTube).</li>
+<li><strong>Cài đặt LG</strong>: mở cài đặt gốc của TV.</li>
+</ul>
+<h3>Tab Ứng dụng</h3>
+<ul>
+<li>Ô <strong>Tìm ứng dụng</strong> theo tên.</li>
+<li><strong>Đầu vào</strong>: Live TV, các cổng HDMI.</li>
+<li><strong>Yêu thích</strong> và <strong>Tất cả ứng dụng</strong>: chạm để mở trên TV.</li>
+</ul>
+<h3>Tab TV</h3>
+<ul>
+<li><strong>Âm thanh · Hình ảnh</strong>: thanh trượt âm lượng và đèn nền, chọn chế độ hình.</li>
+<li><strong>Wi-Fi</strong>: quét và kết nối mạng, nhập mật khẩu ngay trên điện thoại.</li>
+<li><strong>Bluetooth</strong>: tìm, kết nối hoặc ngắt loa, tai nghe.</li>
+<li><strong>Hẹn giờ tắt</strong>: Tắt, 15, 30, 60, 90 hoặc 120 phút. Thời gian còn lại hiện ở thanh trên cùng.</li>
+<li><strong>Tắt màn hình</strong>: tắt màn hình mà TV vẫn phát tiếng.</li>
+<li><strong>Điện thoại đã ghép</strong>: xem và gỡ các điện thoại đã ghép. Điện thoại bị gỡ phải nhập mã PIN lại.</li>
+</ul>
+<h3>Tab Launcher</h3>
+<p>Chỉnh Nobi Launcher trên TV mà không cần cầm remote:</p>
+<ul>
+<li><strong>Hình nền</strong>: chọn hình nền; bấm <strong>Từ điện thoại</strong> để chọn ảnh trong máy, ảnh được cắt vừa khung 16:9 và gửi lên TV (TV giữ tối đa 12 ảnh). Bấm <strong>Sửa</strong> để sắp xếp thứ tự, ẩn hình nền có sẵn hoặc xoá ảnh của bạn.</li>
+<li><strong>Yêu thích</strong>: thêm, bỏ và sắp xếp app trên dock.</li>
+<li><strong>Giao diện web</strong>: Tự động, Sáng hoặc Tối cho chính trang Nobi Remote.</li>
+<li><strong>Đồng hồ</strong>: 12/24 giờ, hiện giây, tên trong lời chào.</li>
+<li><strong>Thời tiết</strong>: bật widget, tìm và chọn thành phố, °C hoặc °F.</li>
+<li><strong>Chung</strong>: màu nhấn, cách sắp xếp app, hiện tên app ở Trang chủ và trang Ứng dụng, giảm chuyển động.</li>
+<li><strong>Ứng dụng được hiện</strong>: chọn app nào hiện trên Nobi Launcher.</li>
+</ul>
+</section>
+
+<section class="guide-section" id="wrap-section-7"><h2 id="section-7">7. Cập nhật</h2>
+<p>Cài file <code>.ipk</code> mới đè lên bản cũ theo <a href="#step-2">Bước 2</a>. Cài đặt, hình nền, ảnh và các điện thoại đã ghép đều được giữ nguyên. Sau khi cài, tắt và bật lại TV để Nobi Launcher và Nobi Remote chạy bản mới.</p>
+</section>
+
+<section class="guide-section" id="wrap-section-8"><h2 id="section-8">8. Gỡ cài đặt</h2>
+<ol>
+<li>Vào <strong>Cài đặt › Tích hợp</strong>, tắt <strong>Nút Home mở Nobi Launcher</strong>, rồi chọn <strong>Khởi động lại ngay</strong>.</li>
+<li>Mở lại Nobi Launcher, tắt 3 mục còn lại trong <strong>Tích hợp</strong>.</li>
+<li>Gỡ app <strong>Nobi Launcher</strong> bằng trình quản lý app của LG hoặc webOS Dev Manager.</li>
+<li>Trên điện thoại, gỡ hồ sơ <strong>Nobi Home CA</strong> nếu không dùng Nobi Remote nữa. Trên iPhone, hồ sơ nằm ở <strong>Cài đặt › Cài đặt chung › VPN &amp; Quản lý thiết bị</strong>.</li>
+</ol>
+</section>
+
+<section class="guide-section" id="wrap-section-9"><h2 id="section-9">9. Xử lý sự cố</h2>
+<table>
+<thead><tr><th>Hiện tượng</th><th>Nguyên nhân thường gặp</th><th>Hướng xử lý</th></tr></thead>
+<tbody>
+<tr><td>Bấm Home vẫn ra màn hình của LG</td><td>Công tắc <strong>Nút Home</strong> chỉ có hiệu lực sau khi khởi động lại TV</td><td>Kiểm tra Quick Start+ đã tắt, rồi tắt hẳn TV và bật lại</td></tr>
+<tr><td>Bật TV không thấy Nobi Launcher</td><td>Nobi Launcher mở khoảng một phút sau khi TV khởi động; nếu Quick Start+ đang bật, TV chỉ thức dậy chứ không khởi động lại</td><td>Chờ khoảng một phút; tắt Quick Start+</td></tr>
+<tr><td>Trang Tích hợp báo cần root</td><td>Homebrew Channel không chạy được lệnh bằng quyền root</td><td>Kiểm tra lại việc root trong app Homebrew Channel</td></tr>
+<tr><td>Điện thoại không mở được Nobi Remote</td><td>Công tắc chưa bật, khác mạng Wi-Fi, IP của TV đã đổi, hoặc điện thoại chưa tin chứng chỉ</td><td>Kiểm tra công tắc <strong>Điều khiển từ điện thoại</strong> và Wi-Fi; xem lại địa chỉ ở <strong>Cài đặt › Hệ thống</strong>; nếu trình duyệt báo chứng chỉ không an toàn, làm lại bước cài chứng chỉ, trên iPhone nhớ bật <strong>Nobi Home CA</strong> trong <strong>Cài đặt tin cậy chứng nhận</strong></td></tr>
+<tr><td>Biểu tượng Nobi Remote trên màn hình chính iPhone chỉ là chữ N</td><td>iPhone chưa tin chứng chỉ của TV lúc thêm biểu tượng</td><td>Bật <strong>Nobi Home CA</strong> như ở bước cài chứng chỉ, xoá biểu tượng cũ rồi thêm lại từ Safari</td></tr>
+<tr><td>Phím trên điện thoại không có tác dụng</td><td>Lần đầu, TV hỏi có cho điện thoại điều khiển không</td><td>Dùng remote của TV bấm <strong>Cho phép</strong></td></tr>
+</tbody>
+</table>
+</section>
+
+<section class="guide-section" id="wrap-section-10"><h2 id="section-10">10. Giấy phép và ghi công</h2>
+<ul>
+<li>Nobi Launcher do Nobi Nhat Nguyen phát triển, phát hành theo giấy phép MIT (xem file <code>LICENSE</code> của repo).</li>
+<li>Dựa trên <a href="https://github.com/ecklf/lg-luma" target="_blank" rel="noopener">lg-luma</a> của ecklf (MIT).</li>
+<li>Font Inter và Noto Sans (SIL Open Font License 1.1), biểu tượng con giáp từ Fluent Emoji của Microsoft (MIT), SDL (zlib).</li>
+<li>Mã nguồn: <a href="https://github.com/nobinhatnguyen/webos-faultmanager-auto" target="_blank" rel="noopener">github.com/nobinhatnguyen/webos-faultmanager-auto</a>.</li>
+</ul>
+</section>
+<footer class="footer author-footer"><div class="author-avatar">N</div><div><strong>Nobi Nhật Nguyễn</strong><p>Tác giả Nobi Launcher và Nobi Remote cho LG webOS TV.</p><a href="https://github.com/nobinhatnguyen" target="_blank" rel="noopener">github.com/nobinhatnguyen</a> · <a href="https://github.com/nobinhatnguyen/webos-faultmanager-auto" target="_blank" rel="noopener">Repository mã nguồn</a><p class="credit">Ghi nhận dự án gốc: <a href="https://github.com/ecklf/lg-luma" target="_blank" rel="noopener">ecklf/lg-luma</a> (MIT). Chỉ bật các mục Tích hợp sau khi đã xác nhận TV root hoạt động.</p></div></footer></main></div><script>const $=(s,r=document)=>r.querySelector(s);const $$=(s,r=document)=>Array.from(r.querySelectorAll(s));const store={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};function setOS(os){$$('[data-os]').forEach(el=>{if(el.classList.contains('os-view'))el.hidden=el.dataset.os!==os;else if(el.classList.contains('os-tab')||el.classList.contains('chip'))el.classList.toggle('active',el.dataset.os===os)});store.set('nobi-os',os)}function copyButtons(){$$('pre').forEach(pre=>{let btn=document.createElement('button');btn.className='copy-btn';btn.textContent='⧉ Sao chép';btn.onclick=async()=>{try{await navigator.clipboard.writeText($('code',pre)?.innerText||'');btn.textContent='✓ Đã sao chép';setTimeout(()=>btn.textContent='⧉ Sao chép',1500)}catch(e){btn.textContent='Không thể sao chép'}};pre.appendChild(btn)})}copyButtons();setOS(store.get('nobi-os')||'mac');$$('.chip[data-os],.os-tab').forEach(b=>b.onclick=()=>setOS(b.dataset.os));$('#theme-toggle').onclick=()=>{document.body.classList.toggle('light');store.set('nobi-theme',document.body.classList.contains('light')?'light':'dark')};if(store.get('nobi-theme')==='light')document.body.classList.add('light');$('.mobile-menu').onclick=()=>$('.sidebar').classList.toggle('open');$$('.sidebar a').forEach(a=>a.onclick=()=>$('.sidebar').classList.remove('open'));const navs=$$('.sidebar a');const observer=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){navs.forEach(a=>a.classList.toggle('active',a.dataset.nav===e.target.id));let index=navs.findIndex(a=>a.dataset.nav===e.target.id);$('.progress div').style.width=((index+1)/navs.length*100)+'%';$('.progress-label').textContent=`Mục ${index+1}/${navs.length}`}})},{rootMargin:'-100px 0px -70% 0px'});$$('.guide-section h2').forEach(h=>observer.observe(h));$('.search').addEventListener('input',e=>{let q=e.target.value.trim().toLowerCase();let n=0;$$('.guide-section').forEach(s=>{let ok=!q||s.textContent.toLowerCase().includes(q);s.hidden=!ok;if(ok)n++});$('.no-results').hidden=n!==0});</script><script>document.querySelectorAll('.seg-tabs').forEach(group=>{group.querySelectorAll('.seg-tab').forEach(btn=>btn.addEventListener('click',()=>{group.querySelectorAll('.seg-tab').forEach(b=>b.classList.toggle('active',b===btn));group.querySelectorAll('.seg-pane').forEach(p=>p.hidden=p.id!==btn.dataset.target)}))});</script><script>
+(function(){
+  const defaults={ip:'192.168.1.100'};
+  const inputs={ip:document.getElementById('cfg-ip')};
+  // Code blocks plus inline examples that show the TV address
+  const nodes=[...document.querySelectorAll('pre code, .guide-section :not(pre)>code, .os-note code')];
+  const originals=new Map(nodes.map(node=>[node,node.textContent]));
+  const validIP=(s)=>{const p=s.split('.');return p.length===4&&p.every(x=>/^\d{1,3}$/.test(x)&&Number(x)<=255)};
+  function apply(){
+    const ip=inputs.ip.value.trim();
+    const okIP=validIP(ip);
+    inputs.ip.setAttribute('aria-invalid',String(!okIP));
+    const status=document.getElementById('cfg-status');
+    status.textContent=okIP?'✓ Lệnh bên dưới được cập nhật tự động':'⚠ IP chưa hợp lệ — hãy nhập IPv4 đúng định dạng';
+    status.style.color=okIP?'#a4e4c2':'#ffae91';
+    for(const node of nodes){
+      node.textContent=originals.get(node).replaceAll('192.168.1.100',okIP?ip:defaults.ip);
+    }
+  }
+  for(const input of Object.values(inputs))input.addEventListener('input',apply);
+  document.getElementById('cfg-reset').addEventListener('click',()=>{for(const [k,input] of Object.entries(inputs))input.value=defaults[k];apply()});
+  apply();
+})();
+</script></body></html>
