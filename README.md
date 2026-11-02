@@ -1,6 +1,6 @@
 # LG webOS TV — Hướng dẫn SSH, Root & Nobi Launcher
 
-**Phiên bản hiện tại: v1.0.0** (2026-11-02) · [Lịch sử phiên bản](#lịch-sử-phiên-bản)
+**Phiên bản hiện tại: v1.1.0** (2026-11-02) · [Lịch sử phiên bản](#lịch-sử-phiên-bản)
 
 Hướng dẫn từng bước để kết nối SSH, root LG webOS TV bằng `faultmanager-autoroot`, thiết lập Homebrew Channel và tùy chỉnh launcher Luma. Có lệnh cho **macOS** và **Windows**, cùng ô nhập IP TV và đường dẫn file để tự tạo lệnh phù hợp.
 
@@ -43,8 +43,9 @@ File cài và hướng dẫn nằm trong thư mục [`nobi-launcher/`](./nobi-la
 
 | File | Nội dung |
 | --- | --- |
-| [`com.nobi.launcher_2.10.3_arm.ipk`](./nobi-launcher/com.nobi.launcher_2.10.3_arm.ipk) | File cài Nobi Launcher, đã gồm Nobi Remote. |
+| [`com.nobi.launcher_1.0.1_arm.ipk`](./nobi-launcher/com.nobi.launcher_1.0.1_arm.ipk) | File cài Nobi Launcher, đã gồm Nobi Remote. |
 | [`SHA256SUMS`](./nobi-launcher/SHA256SUMS) | Mã kiểm tra file tải về. |
+| [`CHANGELOG.md`](./nobi-launcher/CHANGELOG.md) | Thay đổi của từng phiên bản Nobi Launcher. |
 | [`README.html`](./nobi-launcher/README.html) | Hướng dẫn cài đặt và sử dụng (mở bằng trình duyệt sau khi tải ZIP). |
 | [`README.md`](./nobi-launcher/README.md) | Cùng nội dung, đọc trực tiếp trên GitHub. |
 
@@ -77,6 +78,12 @@ File cài và hướng dẫn nằm trong thư mục [`nobi-launcher/`](./nobi-la
 - **Nobi Launcher:** [`nobi-launcher/README.html`](./nobi-launcher/README.html) · [`nobi-launcher/README.md`](./nobi-launcher/README.md).
 
 ## Lịch sử phiên bản
+
+### v1.1.0 — 2026-11-02
+
+- Cập nhật Nobi Launcher lên 1.0.1: nhanh và nhẹ hơn trên TV, file cài còn 12 MB.
+- Control Center hiện âm lượng, đèn nền gần như tức thì; sửa lỗi mục Tích hợp báo TV chưa root.
+- Thêm nhật ký thay đổi của Nobi Launcher: [`nobi-launcher/CHANGELOG.md`](./nobi-launcher/CHANGELOG.md).
 
 ### v1.0.0 — 2026-11-02
 

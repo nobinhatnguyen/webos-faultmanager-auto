@@ -23,9 +23,10 @@ Nobi Launcher dựa trên [lg-luma](https://github.com/ecklf/lg-luma) của eckl
 
 | File                                    | Nội dung                                                                        |
 | --------------------------------------- | ------------------------------------------------------------------------------- |
-| `com.nobi.launcher_<phiên bản>_arm.ipk` | File cài Nobi Launcher, đã gồm cả Nobi Remote. Tải ở mục **Releases** của repo. |
+| `com.nobi.launcher_<phiên bản>_arm.ipk` | File cài Nobi Launcher, đã gồm cả Nobi Remote. Nằm ngay trong thư mục này. |
 | `SHA256SUMS`                            | Mã kiểm tra để chắc file tải về không bị hỏng.                                  |
 | `README.md`                             | Hướng dẫn này.                                                                  |
+| [`CHANGELOG.md`](./CHANGELOG.md)        | Thay đổi của từng phiên bản.                                                    |
 
 Kiểm tra file sau khi tải (macOS hoặc Linux):
 
@@ -68,7 +69,7 @@ Chọn một trong hai cách.
 **Cách B: SSH bằng tài khoản root.** Chép file lên TV rồi cài bằng dịch vụ cài app của webOS:
 
 ```bash
-scp com.nobi.launcher_2.10.3_arm.ipk root@<IP-TV>:/media/developer/temp/nobi-launcher.ipk
+scp com.nobi.launcher_1.0.1_arm.ipk root@<IP-TV>:/media/developer/temp/nobi-launcher.ipk
 ssh root@<IP-TV>
 luna-send -i luna://com.webos.appInstallService/dev/install '{"id":"com.nobi.launcher","ipkUrl":"/media/developer/temp/nobi-launcher.ipk","subscribe":true}'
 ```
@@ -251,5 +252,5 @@ Cài file `.ipk` mới đè lên bản cũ theo [Bước 3](#bước-3-cài-file
 
 - Nobi Launcher do Nobi Nhat Nguyen phát triển, phát hành theo giấy phép MIT (xem file `LICENSE` của repo).
 - Dựa trên [lg-luma](https://github.com/ecklf/lg-luma) của ecklf (MIT).
-- Font Inter và Noto Sans (SIL Open Font License 1.1), biểu tượng con giáp từ Fluent Emoji của Microsoft (MIT), SDL (zlib).
+- Font Inter (SIL Open Font License 1.1), biểu tượng con giáp từ Fluent Emoji của Microsoft (MIT), SDL (zlib).
 - Mã nguồn: [github.com/nobinhatnguyen/webos-faultmanager-auto](https://github.com/nobinhatnguyen/webos-faultmanager-auto).
