@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="dark light" name="color-scheme"/><title>tvopt · Dọn và tối ưu LG webOS TV</title><style>*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:92px}body{margin:0;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:#dce5f0;background:#0a111d;line-height:1.68}a{color:#67c8ff}button,input{font:inherit}.top{height:72px;position:sticky;top:0;z-index:20;background:rgba(11,19,32,.92);backdrop-filter:blur(18px);border-bottom:1px solid #263347;display:flex;align-items:center;justify-content:space-between;padding:0 28px;gap:16px}.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.3px}.brand-mark{display:grid;place-items:center;width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,#ff985e,#ff5b56);color:#111;font-size:20px}.brand small{display:block;font-size:11px;font-weight:500;color:#93a3b8;letter-spacing:0}.top-actions{display:flex;gap:10px;align-items:center}.chip,.theme-btn{border:1px solid #344257;background:#152235;color:#dce5f0;border-radius:10px;padding:7px 12px;cursor:pointer}.chip.active{background:#f58b53;color:#181c26;border-color:#f58b53;font-weight:750}.shell{display:grid;grid-template-columns:275px minmax(0,1fr);max-width:1540px;margin:auto}.sidebar{position:sticky;top:72px;height:calc(100vh - 72px);overflow-y:auto;padding:26px 15px 28px 22px;border-right:1px solid #253247}.sidebar h4{font-size:11px;letter-spacing:1.7px;color:#8191a7;margin:12px 10px 14px;text-transform:uppercase}.sidebar a{display:flex;align-items:flex-start;gap:11px;text-decoration:none;color:#9eafc2;font-size:13px;line-height:1.45;padding:10px 11px;border-radius:10px;margin:2px 0}.sidebar a span{font-size:11px;color:#647890;font-weight:800;min-width:20px}.sidebar a:hover,.sidebar a.active{background:#1a2a3e;color:#fff}.sidebar a.active{box-shadow:inset 3px 0 #ff9259}.sidebar .progress{height:5px;background:#25354a;border-radius:5px;overflow:hidden;margin:24px 10px 6px}.sidebar .progress div{height:100%;background:#ff9259;width:0;transition:width .2s}.sidebar .progress-label{color:#7d90a8;font-size:11px;padding:0 10px}.content{min-width:0;padding:35px clamp(20px,5vw,78px) 100px;max-width:1120px;width:100%;margin:auto}.hero{padding:35px 38px 30px;background:radial-gradient(circle at 92% 8%,rgba(255,125,73,.19),transparent 40%),linear-gradient(135deg,#1c2a41,#111d2d);border:1px solid #344157;border-radius:22px;margin-bottom:24px}.eyebrow{font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#ffae76}.hero h1{font-size:clamp(28px,3.4vw,43px);line-height:1.18;letter-spacing:-1px;margin:12px 0 14px;color:#fff}.hero p{color:#a9bbce;max-width:760px}.hero-meta{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}.pill{border:1px solid #435169;border-radius:999px;padding:4px 12px;color:#c7d4e3;font-size:12px}.alert{padding:18px 22px;border-radius:14px;background:#31251e;border:1px solid #73513c;color:#f9d5bc;margin:22px 0}.alert.tip{background:#18302a;border-color:#2f6b58;color:#c9f0df}.search{width:100%;background:#101b2b;border:1px solid #344257;border-radius:11px;padding:11px 13px;color:#e7eff9;outline:none}.search:focus{border-color:#ff9c65}.guide-section{padding:25px 0 28px;border-bottom:1px solid #263347}.guide-section h2{font-size:clamp(23px,2.5vw,30px);line-height:1.3;color:#fff;letter-spacing:-.5px;margin:6px 0 22px}.guide-section h3{font-size:18px;color:#fff;margin:30px 0 12px}.guide-section p,.guide-section li{color:#bdcadb}.guide-section strong{color:#f4f7fd}.guide-section ul,.guide-section ol{padding-left:24px}.guide-section li{margin:7px 0}.guide-section blockquote{margin:18px 0;padding:14px 19px;border-left:3px solid #ff9259;background:#192537;border-radius:0 10px 10px 0}.guide-section blockquote p{margin:0}.guide-section table{width:100%;border-collapse:collapse;font-size:13px;display:block;overflow:auto}.guide-section th,.guide-section td{text-align:left;border-bottom:1px solid #314056;padding:12px;vertical-align:top}.guide-section th{background:#1b2a3e;color:#fff;white-space:nowrap}.guide-section :not(pre)>code{background:#223248;color:#ffbf94;padding:2px 5px;border-radius:5px;font-size:.91em;overflow-wrap:anywhere}pre{background:#0b1522;border:1px solid #2a3b52;border-radius:12px;padding:38px 17px 17px;overflow:auto;position:relative;margin:15px 0 23px}pre code{color:#a8e5db;font-size:12.5px;line-height:1.65;white-space:pre;tab-size:2}.copy-btn{position:absolute;right:9px;top:8px;background:#22364c;border:1px solid #41536a;border-radius:7px;color:#cfe0f3;padding:4px 10px;font-size:11px;cursor:pointer}.copy-btn:hover{background:#34506b}.os-panel{border:1px solid #34465e;border-radius:14px;background:#111e2f;overflow:hidden;margin:19px 0 24px}.os-head{display:flex;align-items:center;justify-content:space-between;gap:10px;background:#1c2b3f;padding:9px 12px}.os-title{font-size:12px;font-weight:800;color:#e3eaf3}.os-tabs{display:flex;gap:5px}.os-tab{border:0;background:transparent;color:#9aabc0;padding:6px 13px;border-radius:8px;cursor:pointer;font-size:12px}.os-tab.active{background:#f58b53;color:#1c1b1b;font-weight:800}.os-body{padding:4px 12px}.os-body pre{margin:8px 0 12px}.os-body .os-note{color:#9cb0c7;font-size:12px;margin:6px 0}.os-view[hidden]{display:none}.no-results{padding:30px;color:#b8c7d8;text-align:center}.footer{font-size:12px;color:#8395ab;padding:30px 0}.mobile-menu{display:none}.light{background:#f5f7fb;color:#263344}.light .top{background:rgba(255,255,255,.93);border-color:#d9e0ea}.light .sidebar{border-color:#d9e0ea}.light .sidebar a{color:#58697c}.light .sidebar a.active,.light .sidebar a:hover{background:#e8edf5;color:#18283a}.light .content .guide-section{border-color:#d9e0ea}.light .guide-section h2,.light .guide-section h3,.light .guide-section strong{color:#162536}.light .guide-section p,.light .guide-section li{color:#44576b}.light .hero{background:linear-gradient(135deg,#203450,#33485f)}.light .guide-section :not(pre)>code{background:#e8edf5;color:#ac4f2b}.light .guide-section blockquote{background:#e7eef7}.light .guide-section th{background:#e4ebf4;color:#1e3044}.light .guide-section td,.light .guide-section th{border-color:#d5dfeb}.light .chip,.light .theme-btn{background:#fff;color:#263344}.light .chip.active{background:#f58b53}.light .os-panel{background:#edf2f8}.light .os-head{background:#dfe8f3}.light .os-title{color:#263344}.light .os-tab{color:#43566c}.light .os-tab.active{color:#1c1b1b}.light .search{background:#fff;color:#182b3d;border-color:#cad5e2}.light .alert{background:#fff1e6;color:#744322}.light .alert.tip{background:#e6f6ef;color:#1f5a45}.light .pill{color:#dce5f0}@media(max-width:850px){.shell{display:block}.sidebar{display:none;position:fixed;top:72px;bottom:0;left:0;width:min(85vw,310px);height:auto;background:#111c2b;z-index:19;box-shadow:20px 0 50px #0009}.sidebar.open{display:block}.mobile-menu{display:inline-flex}.content{padding:20px 18px 65px}.hero{padding:26px 21px}.top{padding:0 14px}.brand small{display:none}.top-actions{gap:5px}.chip,.theme-btn{padding:7px 9px;font-size:12px}.guide-section{padding-top:18px}}@media print{body{background:white!important;color:#111!important}.top,.sidebar,.copy-btn,.os-tabs,.search,.seg-tab-buttons{display:none!important}.shell{display:block}.content{max-width:none;padding:0}.hero{background:white!important;color:#111!important;border:0}.hero h1,.guide-section h2,.guide-section h3{color:#111!important}.guide-section p,.guide-section li{color:#222!important}.os-view[hidden],.seg-pane[hidden]{display:block!important}pre{white-space:pre-wrap;break-inside:avoid}section{break-inside:auto}}</style><style>.seg-tabs{border:1px solid #334155;border-radius:12px;overflow:hidden;margin:14px 0 20px}.seg-tab-buttons{display:flex;gap:6px;padding:7px;background:rgba(128,128,128,.08)}.seg-tab{flex:1;border:0;border-radius:8px;background:transparent;color:inherit;padding:10px 14px;cursor:pointer;font-weight:700}.seg-tab.active{background:#0c8cba;color:#fff}.seg-pane{padding:0 14px 6px}.seg-pane[hidden]{display:none!important}.light .seg-tabs{border-color:#cad5e2}</style><style>
+.configurator{margin:22px 0 28px;padding:23px;border:1px solid #53637b;border-radius:17px;background:linear-gradient(130deg,#192b40,#111e2e)}
+.configurator h2{margin:0 0 5px;font-size:21px;color:#fff}.configurator p{color:#afc0d3;font-size:13px;margin:7px 0 17px}
+.config-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.config-field{display:flex;flex-direction:column;gap:5px;min-width:0}.config-field label{font-size:12px;color:#d8e3f1;font-weight:700}.config-field input{width:100%;border:1px solid #415572;border-radius:9px;padding:10px 12px;background:#0d1929;color:#f2f7ff;outline:none;font:inherit;font-size:13px}.config-field input:focus{border-color:#ff965e}.config-field small{font-size:11px;color:#8fa4bd}.config-field input[aria-invalid=true]{border-color:#ff7676}.config-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:16px}.config-reset{border:1px solid #536781;background:#273b51;color:#fff;border-radius:8px;padding:8px 13px;cursor:pointer}.config-status{font-size:12px;color:#a4e4c2}.config-hint{border-left:3px solid #f58b53;padding-left:10px!important}.light .configurator{background:#e7eef8;border-color:#c5d4e6}.light .configurator h2,.light .config-field label{color:#22344b}.light .configurator p,.light .config-field small{color:#526981}.light .config-field input{background:#fff;color:#1c2e43;border-color:#b6c7d9}.light .config-reset{background:#fff;color:#23344b}
+@media(max-width:680px){.config-grid{grid-template-columns:1fr}.configurator{padding:17px}}
+@media print{.configurator{display:none}}
+</style><style>.download-intro{border:1px solid #40516a;border-radius:18px;padding:24px 28px;background:linear-gradient(125deg,#182c42,#142131);margin:0 0 24px}.download-kicker{font-size:11px;letter-spacing:1.7px;color:#ffb887;font-weight:850}.download-intro h2{font-size:23px;color:#fff;margin:7px 0}.download-intro p{color:#c3d0de;margin:10px 0}.download-intro code{background:#293c52;padding:2px 6px;border-radius:5px;overflow-wrap:anywhere}.download-links{display:flex;flex-wrap:wrap;gap:10px;margin:19px 0}.download-link{display:inline-block;text-decoration:none;border:1px solid #506078;border-radius:10px;padding:10px 15px;color:#e8f3ff;font-weight:700;font-size:13px}.download-link.primary{background:#f58b53;color:#1d1d1d;border-color:#f58b53}.download-intro .download-footnote,.download-intro .download-source{font-size:12px;color:#aebed0}.author-footer{border-top:1px solid #35465c;display:flex;gap:15px;align-items:flex-start;margin-top:35px}.author-avatar{flex:none;width:46px;height:46px;border-radius:14px;display:grid;place-items:center;font-size:25px;font-weight:900;background:linear-gradient(135deg,#ffb36c,#e76d52);color:#19202a}.author-footer strong{font-size:16px;color:#e8eef7}.author-footer p{margin:5px 0}.author-footer .credit{font-size:11px;color:#90a3b7;margin-top:14px}.light .download-intro{background:#e8eef7;border-color:#ccd7e4}.light .download-intro h2,.light .author-footer strong{color:#17293e}.light .download-intro p{color:#41586f}.light .download-intro code{background:#dce5f0}.light .download-intro .download-footnote,.light .download-intro .download-source{color:#566a80}.light .download-link:not(.primary){color:#23405e;border-color:#a5b5c7}@media(max-width:600px){.download-intro{padding:20px}.download-links{flex-direction:column}.download-link{text-align:center}}</style></head><body><header class="top"><div class="brand"><button aria-label="Mở mục lục" class="theme-btn mobile-menu">☰</button><div class="brand-mark">T</div><div>tvopt · Tối ưu TV<small>Chặn quảng cáo · Tắt dịch vụ ngầm · Trả lại RAM</small></div></div><div class="top-actions"><button class="chip active" data-os="mac">macOS</button><button class="chip" data-os="win">Windows</button><button class="theme-btn" id="theme-toggle" title="Chế độ sáng/tối">◐</button></div></header><div class="shell"><aside class="sidebar"><h4>Mục lục · 10 chương</h4><input aria-label="Tìm trong hướng dẫn" class="search" placeholder="Tìm nhanh trong hướng dẫn..." type="search"/><nav><a data-nav="section-1" href="#section-1"><span>01</span>Trong thư mục này</a><a data-nav="section-2" href="#section-2"><span>02</span>Phần A: tối ưu không cần root</a><a data-nav="section-3" href="#section-3"><span>03</span>Phần B: yêu cầu</a><a data-nav="section-4" href="#section-4"><span>04</span>Cài tvopt</a><a data-nav="section-5" href="#section-5"><span>05</span>Các lệnh</a><a data-nav="section-6" href="#section-6"><span>06</span>Script làm gì</a><a data-nav="section-7" href="#section-7"><span>07</span>Đổi cấu hình</a><a data-nav="section-8" href="#section-8"><span>08</span>Gỡ cài đặt</a><a data-nav="section-9" href="#section-9"><span>09</span>Không nên chặn hoặc tắt</a><a data-nav="section-10" href="#section-10"><span>10</span>Giới hạn và nguồn</a></nav><div class="progress"><div></div></div><div class="progress-label">Chưa bắt đầu</div></aside><main class="content"><div class="hero"><div class="eyebrow">Hướng dẫn sử dụng · 02.11.2026</div><h1>Dọn và tối ưu LG webOS TV</h1><p>Bớt quảng cáo, bớt dịch vụ chạy ngầm, trả lại RAM cho TV. <strong>Phần A</strong> chỉnh trong Cài đặt của TV bằng remote, ai cũng làm được. <strong>Phần B</strong> dành cho TV đã root: script <code>tvopt.sh</code>, một file chạy thẳng trên TV và tự chạy lại mỗi lần bật TV. Nên làm trước khi cài <a href="../nobi-launcher/README.html">Nobi Launcher</a>.</p><div class="hero-meta"><span class="pill">Đã thử: LG UK6340PTF · webOS TV Lite 4.4.3</span><span class="pill">RAM khả dụng ~145 MB → ~340 MB</span><span class="pill">10 chương</span><span class="pill">Hoạt động offline · 1 file HTML</span></div></div><section class="download-intro" aria-label="Tải script tvopt"><div class="download-kicker">BẮT ĐẦU TẠI ĐÂY</div><h2>Chuẩn bị script</h2><p>Phần A không cần tải gì. Với Phần B, tải <strong>tvopt.sh</strong> (khoảng 9&nbsp;KB) vào thư mục <code>Downloads</code> trên máy tính, rồi nhập IP TV trong biểu mẫu phía dưới để tạo lệnh cài đặt.</p><div class="download-links"><a href="tvopt.sh" download class="download-link primary">⤓ Tải tvopt.sh</a><a href="https://github.com/nobinhatnguyen/webos-faultmanager-auto/tree/main/tv-optimize" target="_blank" rel="noopener" class="download-link">↗ Thư mục trên GitHub</a></div><p class="download-footnote">Nếu mở trang này từ GitHub, mở file <code>tvopt.sh</code> trong thư mục <code>tv-optimize</code> rồi chọn <strong>Download raw file</strong>. Script chạy <strong>trên TV</strong> bằng tài khoản root, không chạy trực tiếp trên macOS/Windows.</p><div class="download-source">Script chỉ dùng lệnh có sẵn trên TV và tính năng của <a href="https://github.com/webosbrew/webos-homebrew-channel" target="_blank" rel="noopener">Homebrew Channel</a>; không tải thêm gì từ Internet.</div></section><section aria-label="Cấu hình lệnh cài đặt" class="configurator" id="command-config">
+<h2>⚙️ Tùy chỉnh thông tin — lệnh tự cập nhật</h2>
+<p>Nhập IP TV. Tất cả các khối lệnh phía dưới sẽ tự động thay đổi; chọn tab macOS / Windows để xem lệnh tương ứng.</p>
+<div class="config-grid">
+<div class="config-field" style="grid-column:1 / -1"><label for="cfg-ip">Địa chỉ IP TV</label><input id="cfg-ip" inputmode="decimal" placeholder="192.168.1.100" spellcheck="false" type="text" value="192.168.1.100"/><small>Xem trong Settings › Network của TV</small></div>
+</div>
+<div class="config-actions"><button class="config-reset" id="cfg-reset" type="button">↺ Khôi phục mặc định</button><span class="config-status" id="cfg-status" role="status">✓ Lệnh bên dưới được cập nhật tự động</span></div>
+<p class="config-hint">Thông tin cấu hình chỉ dùng để tạo lệnh trong trình duyệt; không gửi lên máy chủ. Luôn kiểm tra lệnh trước khi sao chép và chạy.</p>
+</section><div class="alert"><strong>⚠ Cảnh báo:</strong> Script mới được thử trên <strong>LG UK6340PTF, webOS TV Lite 4.4.3</strong>. Script không ghi vào phân vùng hệ thống: mọi thay đổi nằm trong RAM hoặc là cờ của Homebrew Channel, nên gỡ hook rồi khởi động lại là TV trở về như cũ (xem <a href="#section-8">Gỡ cài đặt</a>). Trên TV khác, chạy <code>status</code> trước để xem TV có gì.</div><div class="no-results" hidden="">Không tìm thấy nội dung phù hợp.</div>
+
+<section class="guide-section" id="wrap-section-1"><h2 id="section-1">1. Trong thư mục này</h2>
+<table>
+<thead><tr><th>File</th><th>Nội dung</th></tr></thead>
+<tbody>
+<tr><td><code>tvopt.sh</code></td><td>Script tối ưu, một file, chạy trên TV đã root.</td></tr>
+<tr><td><code>README.md</code> / <code>README.html</code></td><td>Hướng dẫn này.</td></tr>
+</tbody>
+</table>
+<p>Hướng dẫn chia làm hai phần. Làm <a href="#section-2">Phần A</a> trước; nếu TV đã root thì làm tiếp <a href="#section-3">Phần B</a>.</p>
+</section>
+
+<section class="guide-section" id="wrap-section-2"><h2 id="section-2">2. Phần A: tối ưu không cần root</h2>
+<p>Mở <strong>Settings → All Settings</strong> trên TV. Tên mục có thể khác chút tùy vùng và phiên bản.</p>
+<table>
+<thead><tr><th>#</th><th>Việc</th><th>Đường dẫn</th><th>Tác dụng</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Tắt <strong>Quick Start+</strong></td><td>General → Quick Start+</td><td>Mỗi lần tắt/bật là khởi động lại thật, RAM được dọn sạch. Đổi lại bật lên chậm hơn 10–20 giây. Nobi Launcher cũng cần tắt mục này</td></tr>
+<tr><td>2</td><td>Tắt <strong>Home Auto Launch</strong></td><td>General → Home Settings</td><td>Bật TV không tự mở thanh Home</td></tr>
+<tr><td>3</td><td>Tắt <strong>Home Promotion</strong>, <strong>Content Recommendation</strong></td><td>General → Home Settings</td><td>Bỏ quảng cáo, đề xuất trên Home</td></tr>
+<tr><td>4</td><td>Bỏ đồng ý <strong>Viewing Information</strong>, <strong>Interest-Based Advertising</strong>, <strong>Voice Information</strong></td><td>General → About this TV → User Agreements</td><td>Ngừng quảng cáo theo hành vi, ngừng gửi dữ liệu xem</td></tr>
+<tr><td>5</td><td>Tắt <strong>Live Plus</strong></td><td>General → Live Plus</td><td>Ngừng nhận diện nội dung đang chiếu (ACR)</td></tr>
+<tr><td>6</td><td>Tắt <strong>AirPlay</strong> nếu không chiếu từ iPhone/Mac</td><td>Home Dashboard → AirPlay &amp; HomeKit Settings</td><td>Giải phóng khoảng 29 MB</td></tr>
+<tr><td>7</td><td>Tắt <strong>Mobile TV On</strong> / <strong>Turn on via Wi-Fi</strong></td><td>General → Mobile TV On</td><td>Bớt dịch vụ chờ đánh thức qua mạng</td></tr>
+<tr><td>8</td><td>Đổi <strong>DNS</strong> sang DNS chặn quảng cáo, ví dụ AdGuard <code>94.140.14.14</code></td><td>Network → Wi-Fi → Advanced Settings → Edit</td><td>Chặn quảng cáo ở mức mạng. Đặt trên router hoặc Pi-hole thì áp cho cả nhà</td></tr>
+<tr><td>9</td><td>Tắt <strong>Allow Automatic Updates</strong></td><td>General → About this TV</td><td>Giữ firmware hiện tại; bản mới có thể vá lỗ hổng dùng để root</td></tr>
+<tr><td>10</td><td>Đóng app sau khi xem</td><td>Giữ nút Home → vuốt app lên</td><td>Netflix, YouTube không chiếm RAM ở nền</td></tr>
+</tbody>
+</table>
+<div class="alert tip"><strong>💡 Mẹo:</strong> Dùng Pi-hole hoặc router để chặn thì lấy danh sách tên miền trong biến <code>ADS_HOSTS</code> ở đầu file <code>tvopt.sh</code>.</div>
+</section>
+
+<section class="guide-section" id="wrap-section-3"><h2 id="section-3">3. Phần B: yêu cầu</h2>
+<ul>
+<li>TV đã root, có <strong>Homebrew Channel</strong> chạy ở chế độ root. Cách root: xem <a href="../README.html">hướng dẫn SSH, Root &amp; Homebrew</a> trong repo này, hoặc <a href="https://rootmy.tv" target="_blank" rel="noopener">rootmy.tv</a> và <a href="https://www.webosbrew.org" target="_blank" rel="noopener">webosbrew.org</a>.</li>
+<li>Vào được shell root: bật <strong>SSH Server</strong> trong Settings của Homebrew Channel. Kiểm tra từ máy tính:</li>
+</ul>
+<pre><code class="language-bash">ssh root@192.168.1.100 'id'</code></pre>
+<p>Kết quả có <code>uid=0(root)</code> là được.</p>
+</section>
+
+<section class="guide-section" id="wrap-section-4"><h2 id="section-4">4. Cài tvopt</h2>
+<h3>Bước 1. Chép script lên TV</h3>
+<p>Chạy trên máy tính, trong thư mục chứa <code>tvopt.sh</code>. Lệnh bỏ ký tự xuống dòng kiểu Windows (CRLF) khi chép, nên dùng được cả khi file bị trình soạn thảo trên Windows đổi định dạng.</p>
+<div class="os-panel"><div class="os-head"><span class="os-title">Chép tvopt.sh lên TV</span><div class="os-tabs"><button class="os-tab" data-os="mac">macOS / Linux</button><button class="os-tab" data-os="win">Windows</button></div></div><div class="os-body"><div class="os-view" data-os="mac"><pre><code class="language-bash">cd ~/Downloads
+ssh root@192.168.1.100 "tr -d '\r' &gt; /tmp/tvopt.sh" &lt; tvopt.sh</code></pre></div><div class="os-view" data-os="win"><pre><code class="language-powershell">cd "$env:USERPROFILE\Downloads"
+cmd /c "ssh root@192.168.1.100 `"tr -d '\r' &gt; /tmp/tvopt.sh`" &lt; tvopt.sh"</code></pre><p class="os-note">Dùng <code>cmd /c</code> vì PowerShell không có toán tử <code>&lt;</code> để chuyển file vào lệnh. Cần OpenSSH Client (Settings → Apps → Optional features).</p></div></div></div>
+<h3>Bước 2. Cài và áp dụng</h3>
+<pre><code class="language-bash">ssh root@192.168.1.100 sh /tmp/tvopt.sh install</code></pre>
+<p>Lệnh <code>install</code> làm 4 việc, mất 10–20 giây:</p>
+<ol>
+<li>Chép script vào <code>/home/root/tvopt/tvopt.sh</code>.</li>
+<li>Tạo file cấu hình <code>/home/root/tvopt/tvopt.conf</code>. Cài lại thì cấu hình cũ được giữ.</li>
+<li>Tạo hook khởi động <code>/var/lib/webosbrew/init.d/90tvopt</code>, để script tự chạy mỗi lần bật TV.</li>
+<li>Áp dụng ngay, không cần khởi động lại.</li>
+</ol>
+<h3>Bước 3. Kiểm tra</h3>
+<pre><code class="language-bash">ssh root@192.168.1.100 sh /home/root/tvopt/tvopt.sh status</code></pre>
+<p>Kết quả mẫu:</p>
+<pre><code>webOS:            4.4.3
+Hook khởi động:   đã cài
+Telnet root:      tắt
+Chặn cập nhật:    bật
+Tên miền đã chặn: 13
+AirPlay/HomeKit:  không chạy
+App đang chạy:    com.nobi.launcher
+MemAvailable:     340 MB</code></pre>
+<p><strong>Không có máy tính có <code>ssh</code>:</strong> mở shell root trên TV (telnet cổng 23 nếu chưa tắt), gõ <code>cat &gt; /tmp/tvopt.sh</code>, dán nội dung file, bấm <code>Ctrl+D</code>, rồi chạy <code>sh /tmp/tvopt.sh install</code>.</p>
+</section>
+
+<section class="guide-section" id="wrap-section-5"><h2 id="section-5">5. Các lệnh</h2>
+<p>Chạy trong shell root trên TV (dấu nhắc thường là <code>root@LGwebOSTV:~#</code>), hoặc từ máy tính bằng <code>ssh root@192.168.1.100 '&lt;lệnh&gt;'</code>.</p>
+<table>
+<thead><tr><th>Lệnh</th><th>Làm gì</th></tr></thead>
+<tbody>
+<tr><td><code>sh /home/root/tvopt/tvopt.sh status</code></td><td>Xem từng mục đang bật hay tắt, app đang chạy, RAM, 8 dòng log cuối.</td></tr>
+<tr><td><code>sh /home/root/tvopt/tvopt.sh apply</code></td><td>Áp dụng lại ngay sau khi sửa <code>tvopt.conf</code>.</td></tr>
+<tr><td><code>sh /home/root/tvopt/tvopt.sh uninstall</code></td><td>Gỡ hook, bỏ chặn quảng cáo, xoá <code>/home/root/tvopt</code>. Thêm <code>--telnet</code> để bật lại telnet.</td></tr>
+<tr><td><code>cat /tmp/tvopt.log</code></td><td>Log của lần khởi động này.</td></tr>
+</tbody>
+</table>
+</section>
+
+<section class="guide-section" id="wrap-section-6"><h2 id="section-6">6. Script làm gì</h2>
+<p>Mỗi mục bật hoặc tắt trong <code>/home/root/tvopt/tvopt.conf</code> (<code>1</code> = bật, <code>0</code> = tắt). Cột cuối là lệnh tương đương nếu muốn làm tay.</p>
+<table>
+<thead><tr><th>Biến</th><th>Mặc định</th><th>Làm gì</th><th>Lệnh làm tay</th></tr></thead>
+<tbody>
+<tr><td><code>BLOCK_ADS</code></td><td>1</td><td>Chặn 13 tên miền quảng cáo LG. Thêm tên miền riêng vào <code>/home/root/tvopt/ads-hosts.txt</code>, mỗi dòng một tên.</td><td><code>cp /etc/hosts /tmp/hosts &amp;&amp; mount --bind /tmp/hosts /etc/hosts</code>, rồi thêm <code>0.0.0.0 ad.lgsmartad.com</code>… vào <code>/etc/hosts</code></td></tr>
+<tr><td><code>BLOCK_TELEMETRY</code></td><td>0</td><td>Chặn thêm 3 tên miền báo lỗi và thống kê. Chưa thử trên webOS 4.</td><td>Như trên với <code>rdx2.lgtvsdp.com</code>, <code>rdx2.nextlgsdp.com</code>, <code>rdl.lgtvcommon.com</code></td></tr>
+<tr><td><code>BLOCK_UPDATES</code></td><td>1</td><td>Chặn cập nhật firmware để giữ root. Là công tắc <strong>Block system updates</strong> của Homebrew Channel, có hiệu lực từ lần khởi động sau.</td><td><code>touch /var/luna/preferences/webosbrew_block_updates</code></td></tr>
+<tr><td><code>DISABLE_TELNET</code></td><td>1</td><td>Tắt telnet root <strong>không mật khẩu</strong> ở cổng 23: ai trong mạng LAN cũng vào được. SSH vẫn dùng bình thường.</td><td><code>touch /var/luna/preferences/webosbrew_telnet_disabled; killall telnetd</code></td></tr>
+<tr><td><code>DISABLE_AIRPLAY</code></td><td>1</td><td>Tắt AirPlay và HomeKit tới lần khởi động sau. Đặt <code>0</code> nếu chiếu từ iPhone/Mac.</td><td><code>stop airplay-adaptor; killall airplay; killall -9 homekit</code></td></tr>
+<tr><td><code>CLOSE_PRELOADED</code></td><td>1</td><td>Đóng app LG nạp sẵn ở nền, 90 giây sau khi bật TV rồi kiểm lại mỗi 15 phút. <strong>Không đóng</strong> app đang hiển thị hoặc đang phát video.</td><td><code>luna-send -n 1 luna://com.webos.applicationManager/closeByAppId '{"id":"netflix"}'</code></td></tr>
+<tr><td><code>PRELOADED_APPS</code></td><td><code>netflix youtube.leanback.v4</code></td><td>Danh sách app id cần đóng. Xem app id đang chạy bằng lệnh <code>status</code>.</td><td>—</td></tr>
+<tr><td><code>BOOT_DELAY</code></td><td>90</td><td>Số giây chờ sau khi bật TV rồi mới tắt AirPlay, đóng app.</td><td>—</td></tr>
+<tr><td><code>INTERVAL</code></td><td>900</td><td>Số giây giữa hai lần kiểm app nạp sẵn; <code>0</code> = chỉ kiểm lúc bật TV.</td><td>—</td></tr>
+</tbody>
+</table>
+<h3>Lệnh đọc trạng thái</h3>
+<p>Script dùng các lệnh dưới để biết app nào đang chạy, đang hiển thị, đang phát video. Có thể chạy tay để kiểm:</p>
+<pre><code class="language-sh">luna-send -n 1 luna://com.webos.applicationManager/running '{}'
+luna-send -n 1 luna://com.webos.applicationManager/getForegroundAppInfo '{}'
+luna-send -n 1 luna://com.webos.media/getActivePipelines '{}'</code></pre>
+<p>Trên một số TV, <code>luna-send -n 1</code> không in kết quả khi đầu ra đi qua pipe. Khi đó dùng <code>luna-send -i …</code> rồi bấm <code>Ctrl+C</code>; script đã tự xử lý việc này.</p>
+</section>
+
+<section class="guide-section" id="wrap-section-7"><h2 id="section-7">7. Đổi cấu hình</h2>
+<p>Ví dụ giữ AirPlay để chiếu từ iPhone. Chạy trên TV:</p>
+<pre><code class="language-sh">sed -i 's/^DISABLE_AIRPLAY=1/DISABLE_AIRPLAY=0/' /home/root/tvopt/tvopt.conf
+sh /home/root/tvopt/tvopt.sh apply</code></pre>
+<p>Mục đã tắt trong lần chạy trước (AirPlay, app nạp sẵn) chỉ chạy lại sau khi khởi động lại TV. Muốn sửa nhiều mục, mở file bằng <code>vi /home/root/tvopt/tvopt.conf</code>.</p>
+</section>
+
+<section class="guide-section" id="wrap-section-8"><h2 id="section-8">8. Gỡ cài đặt</h2>
+<pre><code class="language-bash">ssh root@192.168.1.100 sh /home/root/tvopt/tvopt.sh uninstall</code></pre>
+<ul>
+<li>Script <strong>không ghi vào phân vùng hệ thống</strong>. <code>/etc/hosts</code> là bản trong RAM (bind mount); AirPlay và app nạp sẵn chỉ bị tắt tới lần khởi động sau. Gỡ xong, khởi động lại là TV trở về như cũ.</li>
+<li>Thêm <code>--telnet</code> để bật lại telnet root từ lần khởi động sau.</li>
+<li><code>uninstall</code> giữ nguyên cờ chặn cập nhật firmware; bỏ cờ này trong Settings của Homebrew Channel nếu muốn.</li>
+<li>Nếu TV lỗi lúc khởi động, chế độ failsafe của Homebrew Channel tự bỏ qua các hook ở lần sau.</li>
+</ul>
+</section>
+
+<section class="guide-section" id="wrap-section-9"><h2 id="section-9">9. Không nên chặn hoặc tắt</h2>
+<table>
+<thead><tr><th>Tên miền / dịch vụ</th><th>Chặn hoặc tắt thì hỏng gì</th></tr></thead>
+<tbody>
+<tr><td><code>lgtvsdp.com</code>, <code>lgappstv.com</code>, <code>lgshopsvc.lgappstv.com</code> (trừ <code>ad.lgappstv.com</code>)</td><td>LG Content Store, cài và cập nhật app, đăng nhập</td></tr>
+<tr><td><code>nextlgsdp.com</code>, <code>lgsmartweb.com</code></td><td>Tìm kiếm bằng giọng nói, kết quả tìm kiếm (Nobi Launcher cũng dùng)</td></tr>
+<tr><td><code>snu.lge.com</code>, <code>su.lge.com</code></td><td>Không hỏng gì, nhưng Homebrew Channel đã tự chặn khi bật <code>BLOCK_UPDATES</code></td></tr>
+<tr><td>Tiến trình <code>sdx</code>, <code>prs</code></td><td>Là dịch vụ Luna động: giết đi sẽ tự bật lại khi có lệnh gọi tới, không lợi gì</td></tr>
+<tr><td><code>surface-manager</code>, <code>tvservice</code>, <code>WebAppMgr</code></td><td>Thành phần hệ thống; giết đi là TV treo hoặc khởi động lại</td></tr>
+</tbody>
+</table>
+</section>
+
+<section class="guide-section" id="wrap-section-10"><h2 id="section-10">10. Giới hạn và nguồn</h2>
+<h3>Giới hạn</h3>
+<ul>
+<li>Chỉ thử trên webOS TV Lite 4.4.3. Máy webOS 5 trở lên dùng chung cách gọi Luna nhưng app id của YouTube, tên dịch vụ AirPlay có thể khác. Chạy <code>status</code> trước để xem app id thật, rồi sửa <code>PRELOADED_APPS</code>.</li>
+<li>Chặn bằng <code>/etc/hosts</code> không chặn được tên miền con theo vùng (ví dụ <code>eic.</code>, <code>aic.</code>) hay IP ghi cứng trong firmware. Muốn chặn rộng hơn, dùng DNS hoặc Pi-hole như mục 8 của <a href="#section-2">Phần A</a>.</li>
+<li>Bỏ qua app đang phát video cần <code>node</code> trên TV (webOS có sẵn). Không có <code>node</code> thì script chỉ bỏ qua app đang hiển thị.</li>
+</ul>
+<h3>Nguồn</h3>
+<ul>
+<li>Cờ và hook của Homebrew Channel: <a href="https://github.com/webosbrew/webos-homebrew-channel/blob/main/services/startup.sh" target="_blank" rel="noopener">webosbrew/webos-homebrew-channel <code>services/startup.sh</code></a>.</li>
+<li>Nhóm tên miền và tác dụng phụ khi chặn: <a href="https://forum.level1techs.com/t/lg-tv-block-mini-how-to/255178" target="_blank" rel="noopener">Level1Techs — LG TV Block Mini-How-to</a>, <a href="https://github.com/hugobatista/lg-tv-ad-block" target="_blank" rel="noopener">hugobatista/lg-tv-ad-block</a>.</li>
+</ul>
+</section>
+<footer class="footer author-footer"><div class="author-avatar">N</div><div><strong>Nobi Nhật Nguyễn</strong><p>Tác giả tvopt, Nobi Launcher và Nobi Remote cho LG webOS TV.</p><a href="https://github.com/nobinhatnguyen" target="_blank" rel="noopener">github.com/nobinhatnguyen</a> · <a href="https://github.com/nobinhatnguyen/webos-faultmanager-auto" target="_blank" rel="noopener">Repository mã nguồn</a><p class="credit">Dựa trên tính năng của <a href="https://github.com/webosbrew/webos-homebrew-channel" target="_blank" rel="noopener">Homebrew Channel</a>. Chỉ chạy trên TV bạn sở hữu, sau khi đã xác nhận root hoạt động.</p></div></footer></main></div>
+<script>const $=(s,r=document)=>r.querySelector(s);const $$=(s,r=document)=>Array.from(r.querySelectorAll(s));const store={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};function setOS(os){$$('[data-os]').forEach(el=>{if(el.classList.contains('os-view'))el.hidden=el.dataset.os!==os;else if(el.classList.contains('os-tab')||el.classList.contains('chip'))el.classList.toggle('active',el.dataset.os===os)});store.set('nobi-os',os)}function copyButtons(){$$('pre').forEach(pre=>{let btn=document.createElement('button');btn.className='copy-btn';btn.textContent='⧉ Sao chép';btn.onclick=async()=>{try{await navigator.clipboard.writeText($('code',pre)?.innerText||'');btn.textContent='✓ Đã sao chép';setTimeout(()=>btn.textContent='⧉ Sao chép',1500)}catch(e){btn.textContent='Không thể sao chép'}};pre.appendChild(btn)})}copyButtons();setOS(store.get('nobi-os')||'mac');$$('.chip[data-os],.os-tab').forEach(b=>b.onclick=()=>setOS(b.dataset.os));$('#theme-toggle').onclick=()=>{document.body.classList.toggle('light');store.set('nobi-theme',document.body.classList.contains('light')?'light':'dark')};if(store.get('nobi-theme')==='light')document.body.classList.add('light');$('.mobile-menu').onclick=()=>$('.sidebar').classList.toggle('open');$$('.sidebar a').forEach(a=>a.onclick=()=>$('.sidebar').classList.remove('open'));const navs=$$('.sidebar a');const observer=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){navs.forEach(a=>a.classList.toggle('active',a.dataset.nav===e.target.id));let index=navs.findIndex(a=>a.dataset.nav===e.target.id);$('.progress div').style.width=((index+1)/navs.length*100)+'%';$('.progress-label').textContent=`Mục ${index+1}/${navs.length}`}})},{rootMargin:'-100px 0px -70% 0px'});$$('.guide-section h2').forEach(h=>observer.observe(h));$('.search').addEventListener('input',e=>{let q=e.target.value.trim().toLowerCase();let n=0;$$('.guide-section').forEach(s=>{let ok=!q||s.textContent.toLowerCase().includes(q);s.hidden=!ok;if(ok)n++});$('.no-results').hidden=n!==0});</script><script>document.querySelectorAll('.seg-tabs').forEach(group=>{group.querySelectorAll('.seg-tab').forEach(btn=>btn.addEventListener('click',()=>{group.querySelectorAll('.seg-tab').forEach(b=>b.classList.toggle('active',b===btn));group.querySelectorAll('.seg-pane').forEach(p=>p.hidden=p.id!==btn.dataset.target)}))});</script><script>
+(function(){
+  const defaults={ip:'192.168.1.100'};
+  const inputs={ip:document.getElementById('cfg-ip')};
+  // Code blocks plus inline examples that show the TV address
+  const nodes=[...document.querySelectorAll('pre code, .guide-section :not(pre)>code, .os-note code')];
+  const originals=new Map(nodes.map(node=>[node,node.textContent]));
+  const validIP=(s)=>{const p=s.split('.');return p.length===4&&p.every(x=>/^\d{1,3}$/.test(x)&&Number(x)<=255)};
+  function apply(){
+    const ip=inputs.ip.value.trim();
+    const okIP=validIP(ip);
+    inputs.ip.setAttribute('aria-invalid',String(!okIP));
+    const status=document.getElementById('cfg-status');
+    status.textContent=okIP?'✓ Lệnh bên dưới được cập nhật tự động':'⚠ IP chưa hợp lệ — hãy nhập IPv4 đúng định dạng';
+    status.style.color=okIP?'#a4e4c2':'#ffae91';
+    for(const node of nodes){
+      node.textContent=originals.get(node).replaceAll('192.168.1.100',okIP?ip:defaults.ip);
+    }
+  }
+  for(const input of Object.values(inputs))input.addEventListener('input',apply);
+  document.getElementById('cfg-reset').addEventListener('click',()=>{for(const [k,input] of Object.entries(inputs))input.value=defaults[k];apply()});
+  apply();
+})();
+</script></body></html>

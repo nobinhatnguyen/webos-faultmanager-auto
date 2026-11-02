@@ -2,7 +2,31 @@
 
 Hướng dẫn từng bước để kết nối SSH, root LG webOS TV bằng `faultmanager-autoroot`, thiết lập Homebrew Channel và tùy chỉnh launcher Luma. Có lệnh cho **macOS** và **Windows**, cùng ô nhập IP TV và đường dẫn file để tự tạo lệnh phù hợp.
 
-Repository còn kèm **Nobi Launcher**, launcher thay màn hình chính của TV sau khi đã root (xem [bên dưới](#nobi-launcher)).
+Repository còn kèm **tvopt**, script dọn và tối ưu TV (xem [bên dưới](#dọn-và-tối-ưu-tv-tvopt)), và **Nobi Launcher**, launcher thay màn hình chính của TV sau khi đã root (xem [bên dưới](#nobi-launcher)).
+
+**Thứ tự nên làm:** root TV → dọn và tối ưu bằng tvopt → cài Nobi Launcher.
+
+## Dọn và tối ưu TV (tvopt)
+
+Nên chạy **trước khi cài launcher**. Thư mục [`tv-optimize/`](./tv-optimize/) gồm hai phần:
+
+- **Không cần root:** danh sách mục cần tắt trong Cài đặt của TV (Quick Start+, quảng cáo trên Home, Live Plus, AirPlay, DNS chặn quảng cáo…).
+- **TV đã root:** script `tvopt.sh` chạy thẳng trên TV và tự chạy lại mỗi lần bật TV. Script chặn tên miền quảng cáo LG, chặn cập nhật firmware, tắt telnet root không mật khẩu, tắt AirPlay/HomeKit và đóng Netflix/YouTube nạp sẵn ở nền. Script không đóng app đang xem và không ghi vào phân vùng hệ thống.
+
+| File | Nội dung |
+| --- | --- |
+| [`tvopt.sh`](./tv-optimize/tvopt.sh) | Script tối ưu, chạy trên TV bằng root (`install` · `status` · `apply` · `uninstall`). |
+| [`README.html`](./tv-optimize/README.html) | Hướng dẫn có ô nhập IP để tự tạo lệnh (mở bằng trình duyệt sau khi tải ZIP). |
+| [`README.md`](./tv-optimize/README.md) | Cùng nội dung, đọc trực tiếp trên GitHub. |
+
+Cài nhanh (macOS/Linux, trong thư mục `tv-optimize`, thay `<IP-TV>` bằng IP của TV):
+
+```bash
+ssh root@<IP-TV> "tr -d '\r' > /tmp/tvopt.sh" < tvopt.sh
+ssh root@<IP-TV> sh /tmp/tvopt.sh install
+```
+
+> Đã thử trên LG UK6340PTF, webOS TV Lite 4.4.3: RAM khả dụng sau khi bật TV tăng từ khoảng 145 MB lên 340 MB.
 
 ## Nobi Launcher
 
@@ -22,7 +46,7 @@ File cài và hướng dẫn nằm trong thư mục [`nobi-launcher/`](./nobi-la
 | [`README.html`](./nobi-launcher/README.html) | Hướng dẫn cài đặt và sử dụng (mở bằng trình duyệt sau khi tải ZIP). |
 | [`README.md`](./nobi-launcher/README.md) | Cùng nội dung, đọc trực tiếp trên GitHub. |
 
-> **Yêu cầu:** TV đã root và cài Homebrew Channel (làm theo hướng dẫn root ở trên). Bản này mới được thử trên LG UK6340PTF, webOS TV Lite 4.4.3. Nobi Launcher dựa trên [lg-luma](https://github.com/ecklf/lg-luma) của ecklf (MIT).
+> **Yêu cầu:** TV đã root và cài Homebrew Channel (làm theo hướng dẫn root ở trên). Nên chạy [tvopt](#dọn-và-tối-ưu-tv-tvopt) trước khi cài. Bản này mới được thử trên LG UK6340PTF, webOS TV Lite 4.4.3. Nobi Launcher dựa trên [lg-luma](https://github.com/ecklf/lg-luma) của ecklf (MIT).
 
 ## Bắt đầu nhanh
 
@@ -47,6 +71,7 @@ File cài và hướng dẫn nằm trong thư mục [`nobi-launcher/`](./nobi-la
 - **Dự án gốc:** [throwaway96/faultmanager-autoroot](https://github.com/throwaway96/faultmanager-autoroot).
 - **Homebrew Channel:** [webosbrew/webos-homebrew-channel](https://github.com/webosbrew/webos-homebrew-channel).
 - **Luma launcher:** [ecklf/lg-luma](https://github.com/ecklf/lg-luma).
+- **tvopt:** [`tv-optimize/README.html`](./tv-optimize/README.html) · [`tv-optimize/README.md`](./tv-optimize/README.md).
 - **Nobi Launcher:** [`nobi-launcher/README.html`](./nobi-launcher/README.html) · [`nobi-launcher/README.md`](./nobi-launcher/README.md).
 
 ## Cảnh báo

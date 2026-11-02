@@ -44,7 +44,15 @@ Get-Content .\SHA256SUMS</code></pre><p class="os-note">So sánh hai chuỗi mã
 <section class="guide-section" id="wrap-section-3"><h2 id="section-3">3. Cài đặt</h2>
 <h3>Bước 1. Tắt Quick Start+</h3>
 <p>Trên TV, mở cài đặt của LG và tắt <strong>Quick Start+</strong>. Khi Quick Start+ bật, bấm nút nguồn chỉ đánh thức TV khỏi chế độ chờ, nên Nobi Launcher không tự mở lên được.</p>
-<h3 id="step-2">Bước 2. Cài file <code>.ipk</code></h3>
+<h3 id="step-clean">Bước 2. Dọn và tối ưu TV (nên làm)</h3>
+<p>TV đã root thì chạy <strong>tvopt</strong> trước khi cài: chặn quảng cáo, tắt AirPlay nếu không dùng, đóng Netflix/YouTube nạp sẵn ở nền. Trên TV đã thử, RAM khả dụng tăng từ khoảng 145 MB lên 340 MB, Nobi Launcher có thêm bộ nhớ để chạy. Hướng dẫn đầy đủ, gồm cả các mục tối ưu không cần root: <a href="../tv-optimize/README.html">tv-optimize/README.html</a>.</p>
+<div class="os-panel"><div class="os-head"><span class="os-title">Chép và cài tvopt</span><div class="os-tabs"><button class="os-tab" data-os="mac">macOS / Linux</button><button class="os-tab" data-os="win">Windows</button></div></div><div class="os-body"><div class="os-view" data-os="mac"><pre><code class="language-bash">cd ~/Downloads
+ssh root@192.168.1.100 "tr -d '\r' &gt; /tmp/tvopt.sh" &lt; tvopt.sh
+ssh root@192.168.1.100 sh /tmp/tvopt.sh install</code></pre></div><div class="os-view" data-os="win"><pre><code class="language-powershell">cd "$env:USERPROFILE\Downloads"
+cmd /c "ssh root@192.168.1.100 `"tr -d '\r' &gt; /tmp/tvopt.sh`" &lt; tvopt.sh"
+ssh root@192.168.1.100 sh /tmp/tvopt.sh install</code></pre></div></div></div>
+<p>Tải <code>tvopt.sh</code> ở thư mục <code>tv-optimize</code> của repo vào <code>Downloads</code> trước. tvopt không đóng app đang hiển thị hay video đang phát (kể cả video YouTube thu nhỏ trong dock). Gỡ bằng <code>sh /home/root/tvopt/tvopt.sh uninstall</code>.</p>
+<h3 id="step-install">Bước 3. Cài file <code>.ipk</code></h3>
 <p>Chọn một trong hai cách.</p>
 <p><strong>Cách A: webOS Dev Manager (dễ nhất).</strong> Tải <a href="https://github.com/webosbrew/dev-manager-desktop" target="_blank" rel="noopener">webOS Dev Manager</a> về máy tính, thêm TV theo hướng dẫn của Dev Manager, rồi dùng chức năng cài app (Install) và chọn file <code>com.nobi.launcher_&lt;phiên bản&gt;_arm.ipk</code>.</p>
 <p><strong>Cách B: SSH bằng tài khoản root.</strong> Chép file lên TV từ máy tính:</p>
@@ -56,9 +64,9 @@ ssh root@192.168.1.100</code></pre><p class="os-note">Cần OpenSSH Client (Sett
 <p><strong>Trong shell root trên TV</strong> (dấu nhắc thường là <code>root@LGwebOSTV:~#</code>), cài bằng dịch vụ cài app của webOS:</p>
 <pre><code class="language-sh">luna-send -i luna://com.webos.appInstallService/dev/install '{"id":"com.nobi.launcher","ipkUrl":"/media/developer/temp/nobi-launcher.ipk","subscribe":true}'</code></pre>
 <p>Khi thấy <code>"state":"installed"</code> thì bấm <code>Ctrl+C</code> để thoát.</p>
-<h3>Bước 3. Mở Nobi Launcher</h3>
+<h3>Bước 4. Mở Nobi Launcher</h3>
 <p>Tìm <strong>Nobi Launcher</strong> trong danh sách app của TV và mở lên. Lần đầu mở, app đọc danh sách ứng dụng và đầu vào của TV, mất vài giây.</p>
-<h3>Bước 4. Bật tích hợp</h3>
+<h3>Bước 5. Bật tích hợp</h3>
 <p>Vào <strong>Cài đặt › Tích hợp</strong> trong Nobi Launcher và bật các mục bạn cần (xem <a href="#section-4">phần tiếp theo</a>).</p>
 </section>
 
@@ -193,7 +201,7 @@ ssh root@192.168.1.100</code></pre><p class="os-note">Cần OpenSSH Client (Sett
 </section>
 
 <section class="guide-section" id="wrap-section-7"><h2 id="section-7">7. Cập nhật</h2>
-<p>Cài file <code>.ipk</code> mới đè lên bản cũ theo <a href="#step-2">Bước 2</a>. Cài đặt, hình nền, ảnh và các điện thoại đã ghép đều được giữ nguyên. Sau khi cài, tắt và bật lại TV để Nobi Launcher và Nobi Remote chạy bản mới.</p>
+<p>Cài file <code>.ipk</code> mới đè lên bản cũ theo <a href="#step-install">Bước 3</a>. Cài đặt, hình nền, ảnh và các điện thoại đã ghép đều được giữ nguyên. Sau khi cài, tắt và bật lại TV để Nobi Launcher và Nobi Remote chạy bản mới.</p>
 </section>
 
 <section class="guide-section" id="wrap-section-8"><h2 id="section-8">8. Gỡ cài đặt</h2>

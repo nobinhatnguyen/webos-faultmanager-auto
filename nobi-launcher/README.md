@@ -48,7 +48,18 @@ Root TV và cài Homebrew Channel: làm theo hướng dẫn chính thức ở [r
 
 Trên TV, mở cài đặt của LG và tắt **Quick Start+**. Khi Quick Start+ bật, bấm nút nguồn chỉ đánh thức TV khỏi chế độ chờ, nên Nobi Launcher không tự mở lên được.
 
-### Bước 2. Cài file `.ipk`
+### Bước 2. Dọn và tối ưu TV (nên làm)
+
+TV đã root thì chạy **tvopt** trước khi cài: chặn quảng cáo, tắt AirPlay nếu không dùng, đóng Netflix/YouTube nạp sẵn ở nền. Trên TV đã thử, RAM khả dụng tăng từ khoảng 145 MB lên 340 MB, Nobi Launcher có thêm bộ nhớ để chạy. Hướng dẫn đầy đủ: [`tv-optimize/README.md`](../tv-optimize/README.md).
+
+```bash
+ssh root@<IP-TV> "tr -d '\r' > /tmp/tvopt.sh" < ../tv-optimize/tvopt.sh
+ssh root@<IP-TV> sh /tmp/tvopt.sh install
+```
+
+tvopt không đóng app đang hiển thị hay video đang phát (kể cả video YouTube thu nhỏ trong dock của Nobi Launcher). Gỡ bằng `sh /home/root/tvopt/tvopt.sh uninstall`.
+
+### Bước 3. Cài file `.ipk`
 
 Chọn một trong hai cách.
 
@@ -64,11 +75,11 @@ luna-send -i luna://com.webos.appInstallService/dev/install '{"id":"com.nobi.lau
 
 Khi thấy `"state":"installed"` thì bấm `Ctrl+C` để thoát.
 
-### Bước 3. Mở Nobi Launcher
+### Bước 4. Mở Nobi Launcher
 
 Tìm **Nobi Launcher** trong danh sách app của TV và mở lên. Lần đầu mở, app đọc danh sách ứng dụng và đầu vào của TV, mất vài giây.
 
-### Bước 4. Bật tích hợp
+### Bước 5. Bật tích hợp
 
 Vào **Cài đặt › Tích hợp** trong Nobi Launcher và bật các mục bạn cần (xem phần tiếp theo).
 
@@ -209,7 +220,7 @@ Chỉnh Nobi Launcher trên TV mà không cần cầm remote:
 
 ## Cập nhật
 
-Cài file `.ipk` mới đè lên bản cũ theo [Bước 2](#bước-2-cài-file-ipk). Cài đặt, hình nền, ảnh và các điện thoại đã ghép đều được giữ nguyên. Sau khi cài, tắt và bật lại TV để Nobi Launcher và Nobi Remote chạy bản mới.
+Cài file `.ipk` mới đè lên bản cũ theo [Bước 3](#bước-3-cài-file-ipk). Cài đặt, hình nền, ảnh và các điện thoại đã ghép đều được giữ nguyên. Sau khi cài, tắt và bật lại TV để Nobi Launcher và Nobi Remote chạy bản mới.
 
 ## Gỡ cài đặt
 
