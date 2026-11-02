@@ -1,5 +1,7 @@
 # LG webOS TV — Hướng dẫn SSH, Root & Nobi Launcher
 
+**Phiên bản hiện tại: v1.0.0** (2026-11-02) · [Lịch sử phiên bản](#lịch-sử-phiên-bản)
+
 Hướng dẫn từng bước để kết nối SSH, root LG webOS TV bằng `faultmanager-autoroot`, thiết lập Homebrew Channel và tùy chỉnh launcher Luma. Có lệnh cho **macOS** và **Windows**, cùng ô nhập IP TV và đường dẫn file để tự tạo lệnh phù hợp.
 
 Repository còn kèm **tvopt**, script dọn và tối ưu TV (xem [bên dưới](#dọn-và-tối-ưu-tv-tvopt)), và **Nobi Launcher**, launcher thay màn hình chính của TV sau khi đã root (xem [bên dưới](#nobi-launcher)).
@@ -73,6 +75,13 @@ File cài và hướng dẫn nằm trong thư mục [`nobi-launcher/`](./nobi-la
 - **Luma launcher:** [ecklf/lg-luma](https://github.com/ecklf/lg-luma).
 - **tvopt:** [`tv-optimize/README.html`](./tv-optimize/README.html) · [`tv-optimize/README.md`](./tv-optimize/README.md).
 - **Nobi Launcher:** [`nobi-launcher/README.html`](./nobi-launcher/README.html) · [`nobi-launcher/README.md`](./nobi-launcher/README.md).
+
+## Lịch sử phiên bản
+
+### v1.0.0 — 2026-11-02
+
+- Bắt đầu đánh số phiên bản và ghi lịch sử thay đổi cho mỗi lần cập nhật.
+- Gồm: hướng dẫn root và SSH (macOS/Windows), tvopt dọn và tối ưu TV, Nobi Launcher 2.10.3 kèm Nobi Remote.
 
 ## Cảnh báo
 
