@@ -3,6 +3,38 @@
 Nobi Remote nằm chung gói với Nobi Launcher, nên dùng chung số phiên bản và chung nhật ký này. Từ 1.1.1, số phiên bản cũng trùng với repo hướng dẫn webos-faultmanager-auto.
 Mỗi bản phát hành mới thêm một mục ở đầu file.
 
+## 1.2.0 — 02/11/2026
+
+### Trang Ứng dụng
+
+- Icon app giờ là hình vuông bo góc kiểu macOS, mỗi hàng 10 app.
+- Thêm hàng **Yêu thích** ở đầu trang. Bấm OK là mở app ngay. App yêu thích vẫn có trong danh sách bên dưới.
+- Thêm mục **Tất cả** trước "Phim & video" để xem lại mọi app. Nút X bỏ lọc đã được bỏ.
+
+### Cài đặt
+
+- Mở Cài đặt từ dock là vào thẳng mục **Chung**.
+- Khối menu nằm giữa khoảng trống giữa đồng hồ và dock.
+- Đi lên nút Control Center rồi xuống lại, con trỏ về đúng mục vừa rời. Đi xuống dock rồi lên lại cũng vậy.
+- Bấm xuống ở mục **Giới thiệu** thì con trỏ xuống dock, không còn vòng về "Chung".
+- Tên app trong dock được bật sẵn. Tuỳ chọn ở Cài đặt › Chung › Tên ứng dụng đổi tên thành "Hiện ở dock trong Trang chủ" và "Hiện ở danh sách trong Ứng dụng". TV đã cài bản cũ giữ nguyên lựa chọn cũ.
+
+### Tìm kiếm
+
+- Trong lúc chờ LG trả kết quả, hàng kết quả hiện ô chờ. Bấm OK lúc này không mở nhầm YouTube.
+
+### Nobi Remote
+
+- Ô trên cùng của tab Điều khiển giờ là thanh tìm kiếm. Gõ chữ rồi bấm Tìm là TV mở trang kết quả.
+- Khi TV đang mở ô nhập chữ, thanh này tự chuyển sang gõ chữ lên TV. Bấm icon ở đầu ô để đổi chế độ bằng tay.
+- Gõ chữ lên TV: bấm Enter thì bàn phím điện thoại tự ẩn, và chữ được giữ lại. Quay lại đúng ô đó trên TV thì gõ tiếp được, không phải nhập lại từ đầu.
+- Điện thoại hiện bảng kết quả tìm kiếm giống trên TV. Chạm vào thẻ là TV mở nội dung đó, bấm X là đóng cả hai bên.
+- Icon app trên điện thoại giống trên TV, ví dụ YouTube nền đen.
+
+### Đã sửa
+
+- Đã sửa lỗi để Nobi Launcher yên vài phút thì app chạy gần nhất tự hiện lên.
+
 ## 1.1.1 — 02/11/2026
 
 - Số phiên bản của Nobi Launcher từ nay trùng với số phiên bản của repo hướng dẫn [webos-faultmanager-auto](https://github.com/nobinhatnguyen/webos-faultmanager-auto). File cài đổi tên thành `com.nobi.launcher_1.1.1_arm.ipk`.

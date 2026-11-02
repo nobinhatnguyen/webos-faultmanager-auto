@@ -69,7 +69,7 @@ Chọn một trong hai cách.
 **Cách B: SSH bằng tài khoản root.** Chép file lên TV rồi cài bằng dịch vụ cài app của webOS:
 
 ```bash
-scp com.nobi.launcher_1.1.1_arm.ipk root@<IP-TV>:/media/developer/temp/nobi-launcher.ipk
+scp com.nobi.launcher_1.2.0_arm.ipk root@<IP-TV>:/media/developer/temp/nobi-launcher.ipk
 ssh root@<IP-TV>
 luna-send -i luna://com.webos.appInstallService/dev/install '{"id":"com.nobi.launcher","ipkUrl":"/media/developer/temp/nobi-launcher.ipk","subscribe":true}'
 ```
