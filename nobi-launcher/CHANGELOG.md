@@ -1,7 +1,12 @@
 # Nhật ký thay đổi — Nobi Launcher
 
-Nobi Remote nằm chung gói với Nobi Launcher, nên dùng chung số phiên bản và chung nhật ký này.
+Nobi Remote nằm chung gói với Nobi Launcher, nên dùng chung số phiên bản và chung nhật ký này. Từ 1.1.1, số phiên bản cũng trùng với repo hướng dẫn webos-faultmanager-auto.
 Mỗi bản phát hành mới thêm một mục ở đầu file.
+
+## 1.1.1 — 02/11/2026
+
+- Số phiên bản của Nobi Launcher từ nay trùng với số phiên bản của repo hướng dẫn [webos-faultmanager-auto](https://github.com/nobinhatnguyen/webos-faultmanager-auto). File cài đổi tên thành `com.nobi.launcher_1.1.1_arm.ipk`.
+- Không đổi tính năng so với 1.0.1.
 
 ## 1.0.1 — 02/11/2026
 
